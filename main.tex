@@ -582,6 +582,7 @@ algorithm is then taken for the respective shape.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{A Tool for Social and Pedagogical Investigations} \label{sec:experiment}
+\label{sec4}
 
 In addition to constituting a technically novel system, the teachable robotic
 agent presented represents a tool which may be used for investigating social and
@@ -706,13 +707,15 @@ with each other.
 
 %\section{ADDITIONAL REQUIREMENTS}
 
+\paragraph{Role of the experimenter}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions and Future Work}
 
 %\subsection{Conclusions}
 
-The technical challenges involved in developing a teachable robotic agent in the context of handwriting which have been addressed in this work include:
+The technical challenges involved in developing a teachable robotic agent in the
+context of handwriting which have been addressed in this work include:
 
 \begin{itemize}
 
@@ -783,46 +786,49 @@ The technical challenges involved in developing a teachable robotic agent in the
 %evaluation of the system is underway, with an in situ interaction with primary
 %school students being conducted in the coming weeks. 
 
-The work presented opens up the research area of the role for robots in the
-education of handwriting and other embodied activities, and makes significant,
-novel steps towards addressing the over-arching research question of how
-interacting with such a robotic learning partner may be beneficial for
-sustaining a child's interaction in handwriting interventions and the impact on
-the participating child's motivation, self-esteem, and educational future.
+\subsection{Why a robot?}
 
 
-%\subsection{Future Works}
-%\section{Future work}
 
-%A number of research questions remain open for investigation in the wider scope
-%of the CoWriter project, in addition to those which have been raised as a
-%result of the work carried out to develop the presented system.
+\subsection{Future Work}
 
-%In the scope of open technical questions, it remains to be seen how shape
-%models for letters might be generated which capture the full range of mistakes
-%typical of children learning handwriting: extending the current system capable
-%of incorporating internal proportion and global deformation errors to one which
-%can also generate missing subparts of the letter, or break the letter down into
-%primitive strokes at will, for example. Could incorporating a database of
-%letters drawn by children into the shape modeling process facilitate this? 
+In the scope of open technical questions, it remains to be seen how shape models
+for letters might be generated which capture the full range of mistakes typical
+of children learning handwriting: extending the current system capable of
+incorporating internal proportion and global deformation errors to one which can
+also generate missing subparts of the letter, or break the letter down into
+primitive strokes at will, for example. While we expect that incorporating a
+database of letters drawn by children into the shape modeling process would
+facilitate this, the current system has conceptual (a PCA only approach can not
+generate or learn a different shape topology) and technical (no support for
+multi-stroke shapes) limitations that need to be overcome.
 
-%In terms of the interaction experience, it may be interesting to investigate
+In terms of the interaction experience, the current experimental setting, while
+technically autonomous, can not robustly recover from situations outside of the
+nominal protocol (presented in section~\ref{sec4}), and consequently still requires the
+presence of an experimenter. The robot state machine would require to be
+extended in non-trivial ways to allow for long, fully autonomous, interactions
+with children.
+
+%it may be interesting to investigate
 %which other technology could be incorporated into the system for a more fluid
 %interaction, such as integrating the user's gaze information to infer when the
 %user is finished with a demonstration, or using a classification algorithm to
 %determine which letter has been demonstrated irrespective of its positioning.
 
-%On the educational side, open questions include how the handwriting error
-%generation of the system may be abstracted to a higher level of control so that
-%a teacher may configure it to work with a child on a particular type of
-%mistakes, based on the child's performance. Where would the balance lie between
-%developing autonomous capabilities for the system to determine the child's
-%difficulties, and empowering the teaching staff to decide for themselves
-%instead? And, as a result, the ultimate question for this area of research is
-%to address what impact to the outcomes of a handwriting intervention the
-%addition of such a teachable robotic agent would have: does it impact the
-%motivation of the participants, their self-esteem, and/or the learning gains
-%that they experience?
+On the educational side, open questions include how the handwriting error
+generation of the system may be abstracted to a higher level of control so that
+a teacher may configure it to work with a child on a particular type of
+mistakes, based on the child's performance. Where would the balance lie between
+developing autonomous capabilities for the system to determine the child's
+difficulties, and empowering the teaching staff to decide for themselves
+instead? And, as a result, the ultimate question for this area of research is
+to address what impact to the outcomes of a long-term handwriting intervention the
+addition of such a teachable robotic agent would have: does it impact the
+motivation of the participants, their self-esteem, and/or the learning gains
+that they experience? We are currently considering running a long-term study
+(about 20 hours of interactions per child) that would provide better evidences
+to answer these questions.
 
 \subsection{Impact and Conclusion}
 
