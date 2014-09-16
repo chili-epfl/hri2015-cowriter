@@ -534,7 +534,7 @@ presented:
         %    \includegraphics[width=0.4\textwidth]{figures/naoWriting1.png}
         %}%
         \subfigure{
-            \includegraphics[width=0.3\textwidth]{figures/naoWriting2.png}
+            \includegraphics[width=0.9\linewidth]{figures/naoWriting2.png}
         }%
 %
     \end{center}
@@ -609,10 +609,9 @@ writing process.
 \begin{figure}[htpb]
     \centering
     \includegraphics[width=0.45\textwidth]{figures/chilitagDetection_cameraOverlay.png}
-    \caption[Detection of the tablet using a chilitag to represent the origin of
-    the writing surface frame.]{\label{fig:tabletDetection}Detection of the
-    tablet using a chilitag to represent the origin of the writing surface frame
-(left: robot's camera image, with markers overlaid).}
+    \caption{\label{fig:tabletDetection}Detection of the tablet using a fiducial
+    marker to represent the origin of the writing surface frame. The robot's
+    camera image is on the left (the text trajectory overlay is also visible).}
 
 \end{figure}% * <deanna.m.hood@gmail.com> 2014-09-04T11:21:59.328Z:
 %
@@ -623,13 +622,14 @@ writing process.
 A demonstration of the robot executing a trajectory in synch with the tablet is
 shown in Figure \ref{fig:naoWriting}\footnote{See
 \url{https://www.youtube.com/watch?v=2qWFSJRxCU0} for a video of the
-demonstration. }. % * <deanna.m.hood@gmail.com> 2014-09-04T11:40:30.176Z:
+demonstration. }.
+% * <deanna.m.hood@gmail.com> 2014-09-04T11:40:30.176Z:
 %
 % this sounds dumb on paper.....
 %
 
 
-\subsection{Integration into a Robotic Handwriting Learning Agent}
+\subsection{Integration into a Robotic Agent}
 
 The fusion of the embodied handwriting agent developed with the handwriting
 learning algorithm presented in Section \ref{sec:learningAlgorithm} involves the
@@ -925,42 +925,87 @@ of the study at the second school:
 \end{itemize}
 
 
-
-\subsection{Discussion}% * <deanna.m.hood@gmail.com> 2014-09-05T11:42:42.979Z:
-%
-% this is a reasonable title right?
-%
-
-In addition to the conclusions which 
-Anecdotes which raise questions:
-- "Would have problems with the 'n'" - (8) projecting human learning characteristics. Another said "programmed to write badly" (4)
-- Children saying the other was bad... (3, 9). Child saying the other child's was good (5). Child saying the robot was better than him (9).
-- When one child wrote u differently to the other, they didn't discuss :(
-- so many of them wanted to write the whole word.. robot says "show me a word" and maybe misleading
-- not seeming to notice small changes (12) but maybe from experimenter
-
-- awkward silence, speaking over the top of the robot to talk to experimenter....
-- child walking around
-- word very close to robot's camera
-
-Evidence of engagement:
-- work and/or play
-- once word was good were thinking for a long time about how to improve (8)
-- child `helping' other.. grabbing the pen
-- children trying to cheat the system (10)
-- excitement at stop and test cards - new letters? diff font
-- teaching cursive. group 7 excited to do this even after test finished.
-- unnecessary (unsent) demo from child 11 after it was acceptable but not perfect
-
-\paragraph{Role of the experimenter}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Conclusions and Future Work}
+\section{Towards Long-term Interventions}
 
-%\subsection{Conclusions}
+As noted in the introduction, existing literature on handwriting interventions
+agrees to consider 20 hours spread over 20 weeks as a reasonable intervention
+duration to measure actual effects. This directly questions how suitable is our
+approach for such long-term interactions, and raises several challenges, both
+technical and human.
 
-The technical challenges involved in developing a teachable robotic agent in the
-context of handwriting which have been addressed in this work include:
+In the scope of open technical questions, it remains to be seen how shape models
+for letters might be generated which capture the full range of mistakes typical
+of children learning handwriting: extending the current system capable of
+incorporating internal proportion and global deformation errors to one which can
+also generate missing subparts of the letter, or break the letter down into
+primitive strokes at will, for example. While we expect that incorporating a
+database of letters drawn by children into the shape modeling process would
+facilitate this, the current system has conceptual (a PCA only approach can not
+generate or learn a different shape topology) and technical (no support for
+multi-stroke shapes) limitations which need to be overcome.
+
+In terms of the interaction experience, the current experimental setting, while
+technically autonomous, can not robustly recover from situations outside of the
+nominal protocol (presented in Section~\ref{sec4}), and consequently still
+requires the presence of an experimenter. The interaction state machine would
+require to be extended in non-trivial ways to allow for long, fully autonomous,
+interactions with children. Also, further research may discover how to best
+model/limit the learning speed of the robot so that it is noticeably learning
+while not improving so fast as to limit the long-term interaction potential for
+the system, which may turn out to be child-dependent.
+
+On the educational side, open questions include how the handwriting error
+generation of the system may be abstracted to a higher level of control so that
+a teacher may configure it to work with a child on a particular type of
+mistakes, based on the child's performance. Where would the balance lie between
+developing autonomous capabilities for the system to determine the child's
+difficulties, and empowering the teaching staff to decide for themselves
+instead? And, as a result, the ultimate question for this area of research is
+to address what impact to the outcomes of a long-term handwriting intervention the
+addition of such a teachable robotic agent would have: does it impact the
+motivation of the participants, their self-esteem, and/or the learning gains
+that they experience? We are currently considering running a long-term study
+that would provide better evidences to answer these questions.
+
+
+%In addition to the conclusions which 
+%Anecdotes which raise questions:
+%- "Would have problems with the 'n'" - (8) projecting human learning characteristics. Another said "programmed to write badly" (4)
+%- Children saying the other was bad... (3, 9). Child saying the other child's was good (5). Child saying the robot was better than him (9).
+%- When one child wrote u differently to the other, they didn't discuss :(
+%- so many of them wanted to write the whole word.. robot says "show me a word" and maybe misleading
+%- not seeming to notice small changes (12) but maybe from experimenter
+%
+%- awkward silence, speaking over the top of the robot to talk to experimenter....
+%- child walking around
+%- word very close to robot's camera
+%
+%Evidence of engagement:
+%- work and/or play
+%- once word was good were thinking for a long time about how to improve (8)
+%- child `helping' other.. grabbing the pen
+%- children trying to cheat the system (10)
+%- excitement at stop and test cards - new letters? diff font
+%- teaching cursive. group 7 excited to do this even after test finished.
+%- unnecessary (unsent) demo from child 11 after it was acceptable but not perfect
+
+
+
+
+\section{Impact and Conclusion}
+
+We believe this article introduces three noteworthy contributions: an innovative
+application of data processing and artificial intelligence for the generation and
+learning of hand-written letters suitable for educative purposes; a robotic
+system that has been experimentally proven to provide convincing scaffolding for
+complex human-robot interactions (teacher-learner social interactions, learning by
+demonstration); an initial experimental investigation of what appears to be a
+new role for robots in education.
+
+Specifically, the technical challenges involved in developing a teachable
+robotic agent in the context of handwriting which have been addressed in this
+work include:
 
 \begin{itemize}
 
@@ -990,71 +1035,18 @@ context of handwriting which have been addressed in this work include:
 \end{itemize}
 
 
-
-\subsection{Future Work}
-
-
-
-Further research may discover how to best model/limit the learning speed of the
-robot so that it is noticeably learning while not improving so fast as to limit
-the long-term interaction potential for the system, which may turn out to be
-child-dependent.
-
-
-In the scope of open technical questions, it remains to be seen how shape models
-for letters might be generated which capture the full range of mistakes typical
-of children learning handwriting: extending the current system capable of
-incorporating internal proportion and global deformation errors to one which can
-also generate missing subparts of the letter, or break the letter down into
-primitive strokes at will, for example. While we expect that incorporating a
-database of letters drawn by children into the shape modeling process would
-facilitate this, the current system has conceptual (a PCA only approach can not
-generate or learn a different shape topology) and technical (no support for
-multi-stroke shapes) limitations which need to be overcome.
-
-In terms of the interaction experience, the current experimental setting, while
-technically autonomous, can not robustly recover from situations outside of the
-nominal protocol (presented in Section~\ref{sec4}), and consequently still requires the
-presence of an experimenter. The interaction state machine would require to be
-extended in non-trivial ways to allow for long, fully autonomous, interactions
-with children.
-
-
-On the educational side, open questions include how the handwriting error
-generation of the system may be abstracted to a higher level of control so that
-a teacher may configure it to work with a child on a particular type of
-mistakes, based on the child's performance. Where would the balance lie between
-developing autonomous capabilities for the system to determine the child's
-difficulties, and empowering the teaching staff to decide for themselves
-instead? And, as a result, the ultimate question for this area of research is
-to address what impact to the outcomes of a long-term handwriting intervention the
-addition of such a teachable robotic agent would have: does it impact the
-motivation of the participants, their self-esteem, and/or the learning gains
-that they experience? We are currently considering running a long-term study
-(about 20 hours of interactions per child) that would provide better evidences
-to answer these questions.
-
-\subsection{Impact and Conclusion}
-
-We believe this article introduces three noteworthy contributions: an innovative
-application of data processing and artificial intelligence for the generation and
-learning of hand-written letters suitable for educative purposes; a robotic
-system that has been experimentally proven to provide convincing scaffolding for
-complex human-robot interactions (teacher-learner social interactions, learning by
-demonstration); an initial experimental investigation of what appears to be a
-new role for robots in education.
-
-Because it has the strongest impact for the human-robot interaction community,
-we would like to develop this last point in particular. The work presented here
-investigates a particular role for a robot in the education of handwriting: not
-only the robot is actively performing the activity (it draws letters), but it
-does so in a way that engages the child in a very specific social role. The child
-is the teacher, the robot is the learner: the child must engage in a
-(meta-)cognitive relation with the robot to try to understand why the
-robot fails and how to help it best.  Here, the robot is not only an activity
-facilitator or orchestrator: its physical presence and embodiment induce agency
-and anthropomorphizing, and cognitively engage the child into the learning
-activity, which we predict to lead to higher learning efficacy.
+However, we believe that the strongest impact of this work for the human-robot
+interaction community relates to the very \emph{nature} of the interaction
+fostered by this research. The work presented here investigates a particular
+role for a robot in the education of handwriting: not only the robot is actively
+performing the activity (it draws letters), but it does so in a way that engages
+the child in a very specific social role. The child is the teacher, the robot is
+the learner: the child must engage in a (meta-)cognitive relation with the robot
+to try to understand why the robot fails and how to help it best.  Here, the
+robot is not only an activity facilitator or orchestrator: its physical presence
+and embodiment induce agency and anthropomorphizing, and cognitively engage the
+child into the learning activity, which we predict to lead to higher learning
+efficacy.
 
 Also notable, the robot is not used in the usual context of robotics or computer
 education, but instead in an activity -- handwriting -- that requires fine
