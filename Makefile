@@ -1,8 +1,8 @@
 
 TARGET=main.tex
 
-DOT=$(wildcard figs/*.dot)
-SVG=$(wildcard figs/*.svg)
+DOT=$(wildcard figures/*.dot)
+SVG=$(wildcard figures/*.svg)
 
 all: paper
 
