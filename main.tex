@@ -68,11 +68,6 @@
 
 %%% HRI 2015 -> double-blind review process
 
-% * <deanna.m.hood@gmail.com> 2014-09-05T11:44:54.921Z:
-%
-% Ana Paiva is a reviewer....
-%
-
 %Despite the social motivation for the use of a teachable agent for the
 %engagement and support of children with handwriting difficulties, to date no
 %such technology is known to have been developed. 
@@ -88,10 +83,10 @@ mimicry. Moreover, this system allows for exploring the potential for the
 \emph{learning by teaching} paradigm to be employed in the interaction, so as to
 stimulate meta-cognition, empathy and increased self-esteem in the child user. 
 
-By leveraging simulated handwriting on a synchronised tablet display, a Nao
+By leveraging simulated handwriting on a synchronised tablet display, a {\sc nao}
 humanoid robot with limited fine motor capabilities has been configured as a
 suitably embodied handwriting partner. Shape models derived from principal
-component analysis of a dataset of letter trajectories are generated, and allow
+component analysis of a dataset of letter trajectories have been generated, and allow
 the robot to draw purposefully deformed letters. Learning how to write
 characters well is then achieved by incorporating feedback from user
 demonstrations, which allows the system to learn the optimal parameters for the
@@ -102,7 +97,9 @@ insight into children's use of the novel system.
 %The technical components of the system have been validated, in that children 
 Children aged 6-8 were successfully 1) led to believe that the robot was
 actually writing on the tablet, and 2) able to improve the robot's writing to a
-level which they were satisfied with. Furthermore, the system represents a
+level which they were satisfied with. 
+
+Furthermore, the system represents a
 significant step towards an innovative use for robotics which addresses a
 widespread and socially meaningful challenge in education, and provides context
 for robotics in education beyond the well-explored use of teaching coding- and
@@ -153,11 +150,11 @@ paradigm, there must be an appropriately unskilled peer for them to tutor. In
 the context where the target child is the lowest performer in their class, this
 may present a logistical constraint. In some cases, it may be appropriate for a
 peer or teacher to simulate a na\"ive learner for the target child to teach,
-however for an activity where one's skill level is visually evident - as is the
-case in handwriting - this acting is likely to be eventually detected. As such,
+however for an activity where one's skill level is visually evident -- as is the
+case in handwriting -- this acting is likely to be eventually detected. As such,
 there is motivation for the use of a teachable agent which can be configured for
 a variety of skill levels, and for which children do not have preconceptions
-about handwriting ability.
+about its handwriting ability.
 
 Presented is the development of the first known teachable agent which is capable
 of artificially making mistakes typical of children learning handwriting, and
@@ -165,8 +162,9 @@ correcting them with external feedback. Such a system therefore exhibits the pot
 to engage children in the learning by teaching paradigm in the context of
 handwriting. 
 
-There are three main points which have motivated the use of a robot as the
-teachable agent in the presented work:
+The teachable agent developed has the potential to be embedded as a simulated 
+computer-based agent, however there are three main points which have motivated 
+the use of a robot instead as the teachable agent in the presented work:
 
 \begin{enumerate}
     \item the engagement and ``protégé effect'' elicited by teaching an embodied
@@ -180,7 +178,7 @@ teachable agent in the presented work:
     \item observing a teachable agent respond to what it has been taught
         is a significant step in the learning by teaching
         paradigm \cite{Okita2006}, and therefore it may be significant for the agent to respond
-        with a writing \emph{process}, rather than simply a product, and
+        with a physical writing \emph{process}, rather than simply a product, and
 
     \item the potential for motor mimicry to yield significant improvements in
         handwriting interventions \cite{Berninger1997} further supports the case
@@ -189,26 +187,19 @@ teachable agent in the presented work:
 \end{enumerate}
 
 Consequently, the learning agent developed has been embodied in a commercially
-affordable Nao humanoid robot. Its writing capabilities have been implemented by
+affordable {\sc nao} humanoid robot. Its writing capabilities have been implemented by
 leveraging synchronisation with a tablet display to simulate fine motor skills
 otherwise infeasible for the robot. 
-% * <deanna.m.hood@gmail.com> 2014-09-08T11:08:36.426Z:
-%
-% linking sentence...
-%
 
-Section \ref{sec:learningAlgorithm} presents the novel work in the area of
+Within this article, Section \ref{sec:learningAlgorithm} presents the novel work in the area of
 artificial intelligence to develop a learning algorithm suitable for a teachable
-agent in the context of handwriting.  Section \ref{sec:robotWriting} details the
+agent in the context of handwriting. Section \ref{sec:robotWriting} details the
 extension of this algorithm to an embodied robotic learning agent, including the
-novel approach for achieving simulated fine motor skills on commercially
-affordable humanoid robots.  Section \ref{sec:experiment} explores the novel% * <deanna.m.hood@gmail.com> 2014-09-08T11:09:28.480Z:
-%
-% use a different word
-%
+new approach for achieving simulated fine motor skills on commercially
+affordable humanoid robots.  Section \ref{sec:experiment} explores the 
 contributions made to the study of human-robot interaction, in discussing the
-use of the system with primary school children and its potential as a tool for
-addressing wider pedagogical research questions in education. 
+use of the first-of-its-kind system with primary school children and its potential as a tool for
+addressing wider pedagogical research questions in education. Finally, Section \ref{sec:futureWork} addresses the challenges which are faced in extending this system to a level suitable for long-term studies, and Section \ref{sec:conclusions} concludes by reiterating the content and impact of the article's contributions.
 
 
 
@@ -217,8 +208,8 @@ addressing wider pedagogical research questions in education.
 
 For the development of a reinforcement learning algorithm in the context of
 handwriting, a parameterisation of letters and their deformities has been sought
-to generate the necessary letter models. Depending on the parameters input to
-the letter models, different quality shapes can be generated. The system can
+which is capable of generating the necessary letter models. Depending on the parameters input to
+the letter models, different quality shapes should be generated. The system can
 therefore be configured to improve its writing by modifying the parameters used
 to generate the letters, based on feedback from the reinforcement learning
 partner. To this end, a method which can generate a model from real-world data
@@ -234,22 +225,21 @@ found \cite{Stegmann2002} and allows for dimensionality reduction.
 
 PCA has been performed on a set of letter paths captured from a digital pen,
 using the UJI Pen Characters 2 dataset \cite{Llorens2008} with 120 instances of
-each letter (2 repetitions from 60 adult users). While it may be appropriate to
-identify the location of the most salient features of the shapes in future work,
+each letter (2 repetitions from 60 adult users). While it may be appropriate in future work to
+identify the location of salient features of the shapes which are robust to unanticipated user input,
 the features are currently taken as $n$ uniformly spaced points along the shape
-path as salient features are not guaranteed from children's handwriting. The
+path. The
 points are arranged into an observation vector presented in (\ref{eq:obsVec}),
 where $x_i$ and $y_i$ represent the coordinates of each of the points along the
-path.
+path. The observation shapes are normalised such that they have a shape
+centre of ${\bf 0}$ and a unit maximum dimension.
 
 \begin{equation}\label{eq:obsVec}
 {\bf x} = [x_1, x_2, \ldots, x_n, y_1, y_2, \ldots, y_n]^T
 \end{equation}
 
-In this work, the observation shapes are normalized such that they have a shape
-centre of ${\bf 0}$ and a unit maximum dimension. 
 
-The projection from the original $2n$-dimensional feature space $(n=70)$ to an
+The projection from the original $2n$-dimensional feature space $(n=70)$ to a reduced
 $N$-dimensional space is found as in (\ref{eq:projection}), where ${\bf p}$
 contains the coordinates in the $N$-dimensional space with ${\bf 0}$-origin,
 calculated as in (\ref{eq:paramCalc}). The $2n\times N$ matrix ${\bf \Phi }$ is
@@ -257,7 +247,7 @@ an orthogonal matrix composed of the eigenvectors ${\bf v}_i$ corresponding to
 the largest $N$ eigenvalues ($\lambda_i$) of the covariance matrix of the
 observations, as shown in (\ref{eq:transformCalc}) \cite{Stegmann2002}. As such,
 each shape may be approximated by the mean shape plus a sum of the top $N$
-eigenvectors, weighted by the parameter vector $p$. 
+eigenvectors, weighted by the parameter vector ${\bf p}$. 
 
 \begin{equation}\label{eq:projection}
 {\bf \tilde{x}=\bar{x}+\Phi p}
@@ -282,21 +272,21 @@ is as shown in (\ref{eq:proportionVar}).
 \end{equation}
 
 For the dataset presented in Figure \ref{fig:deviations_sPrint}, the
-eigenvectors associated with the 5 largest eigenvalues explain 90.0\% of the
+eigenvectors associated with the 3 largest eigenvalues explain 78.5\% of the
 variance in the dataset, illustrating the capability of the statistical shape
 modelling approach to produce compact parameterisation of shapes. 
 
-Clusters within paths of a particular letter have been identified using K-means
-clustering to group different styles of writing the letter (\emph{allographs}),
-such that the parameters in the resulting model are only representative of the
-specific allograph of the letter in the dataset. 
+%Clusters within paths of a particular letter have been identified using K-means
+%clustering to group different styles of writing the letter (\emph{allographs}),
+%such that the parameters in the resulting model are only representative of the
+%specific allograph of the letter in the dataset. 
 % * <deanna.m.hood@gmail.com> 2014-09-03T13:05:23.576Z:
 %
 % in the end this was pointless so maybe not worth mentioning
 %
 PCA has been performed on all of the paths of a particular allograph in the
 dataset at a time, to reduce the $2n$-dimensional space to one of a desired
-number of dimensions.
+number of dimensions. $N=10$ has been used for the work presented.
 
 (\ref{eq:projection}) may also be used
 to generate new shapes based on the parameters ${\bf p}$ which are used: ${\bf
@@ -316,9 +306,8 @@ eigenvector (Figure \ref{fig:deviations_sPrint}).
 the shape model derived from PCA from the dataset of print `s'
 shapes.]{\label{fig:deviations_sPrint}The mean shape (left) and the effect
     (right) of varying the first three parameters (each row) of a shape model.
-    The presented model has been derived from PCA on the first cluster of `s'
-    shapes, interpreted as the print allograph. The extent to which each
-parameter is varied is dependent on the eigenvector $\lambda$ corresponding to
+     The extent to which each
+parameter is varied is dependent on the eigenvalue $\lambda$ corresponding to
 the parameter's eigenvector. The percentage of the total variance in the dataset
 explained by each parameter is shown to the left of the corresponding row. }
 
@@ -328,7 +317,7 @@ Interestingly, although the parameters are the result of an \emph{unsupervised}
 statistical shape analysis, they still represent variations which could have
 been intuitively identified by a manual parameterisation. For example, for the
 model shown in Figure \ref{fig:deviations_sPrint}, the parameters may represent
-the width of the top half of the letter compared to the bottom half, the width
+the height of the top half of the letter compared to the bottom half, the width
 of the overall shape, etc. Consequently, the shape modelling process has
 produced the desired outcomes of parameterising the shapes in ways which are
 able to be used to deform them meaningfully.
@@ -345,32 +334,29 @@ When the parameter values are outside of the range observed in the dataset, they
 are less likely to represent shapes from the dataset of reasonable,
 adult-written letters, and as a result are more likely to represent poor shapes.
 Figure \ref{fig:sampleLetters} illustrates sample letters generated from the
-models of `e' and `g' - made from 120 observations each, with 70 sample points -
-by selecting random values for the first 5 parameters from a distribution with
+models of `e' and `g' by selecting random values for the first 5 parameters 
+from a distribution with
 standard deviation of $3\sqrt\lambda_i$ rather than the $\sqrt\lambda_i$
 standard deviation observed in the dataset.
 
 \begin{figure}[thpb]
 \centering
-\subfigure{\raisebox{-0.5\height}{\includegraphics[height=0.08\textwidth]{figures/e1.png}}}
-\subfigure{\raisebox{-0.5\height}{\includegraphics[height=0.05\textwidth]{figures/e4.png}}}
-\subfigure{\raisebox{-0.5\height}{\includegraphics[height=0.08\textwidth]{figures/e3.png}}}
-\subfigure{\raisebox{-0.5\height}{\includegraphics[height=0.08\textwidth]{figures/e5.png}}}\\
-\subfigure{\raisebox{-0.5\height}{\includegraphics[height=0.12\textwidth]{figures/g1.png}}}
-\subfigure{\raisebox{-0.5\height}{\includegraphics[height=0.12\textwidth]{figures/g3.png}}}
-\subfigure{\raisebox{-0.5\height}{\includegraphics[height=0.12\textwidth]{figures/g4.png}}}
-\subfigure{\raisebox{-0.5\height}{\includegraphics[height=0.12\textwidth]{figures/g5.png}}}
-\caption[Sample letters generated from the PCA shape model on 120 `e' and `g'
+\subfigure{\raisebox{-0.5\height}{\includegraphics[height=0.04\textwidth]{figures/e1.png}}}
+\subfigure{\raisebox{-0.5\height}{\includegraphics[height=0.025\textwidth]{figures/e4.png}}}
+\subfigure{\raisebox{-0.5\height}{\includegraphics[height=0.04\textwidth]{figures/e3.png}}}
+\subfigure{\raisebox{-0.5\height}{\includegraphics[height=0.04\textwidth]{figures/e5.png}}}~~~~~
+\subfigure{\raisebox{-0.5\height}{\includegraphics[height=0.06\textwidth]{figures/g1.png}}}
+\subfigure{\raisebox{-0.5\height}{\includegraphics[height=0.06\textwidth]{figures/g3.png}}}
+\subfigure{\raisebox{-0.5\height}{\includegraphics[height=0.06\textwidth]{figures/g4.png}}}
+\subfigure{\raisebox{-0.5\height}{\includegraphics[height=0.06\textwidth]{figures/g5.png}}}
+\caption[Sample letters generated from the PCA shape model on `e' and `g'
 paths.]{\label{fig:sampleLetters}Sample letters generated from the PCA shape
-model on 120 `e' (top) and `g' paths (bottom), generated randomly from
+model on `e' (left) and `g' paths (right), generated randomly from
 parameters with $3\times$ the standard deviation observed in the dataset.}
 
 \end{figure}
 
-In \cite{Chandra2013}, it was found that children aged 4-6 years participating% * <deanna.m.hood@gmail.com> 2014-09-05T11:43:42.851Z:
-%
-% this is not peer-reviewed!
-%
+In \cite{Chandra2013}, it was found that children aged 4-6 years participating
 in a handwriting peer tutoring pilot study most often made mistakes classified
 as inappropriate \emph{internal proportions} or \emph{global deformations}. It
 would be reasonable to consider the shapes in Figure \ref{fig:sampleLetters} in
@@ -380,14 +366,15 @@ children, such as merging strokes or decomposing a shape into multiple subparts
 inappropriately. Nevertheless, sufficient capabilities for the shape model to
 generate `poor' letters which are appropriate for simulating a na\"ive learning
 in the context of handwriting have been demonstrated, using the shape model
-generated with PCA from a dataset of only adults' writing.
+generated from PCA on a dataset of only adults' writing.
 
 
 \subsection{Responding to Feedback}
 
 It was shown in Section \ref{sec:writingGeneration} how the statistical shape
 model of a particular letter may convert a set of parameters into a generated
-letter of the same allograph. Similarly, the model may also be used to convert a
+letter of the same allograph. Similarly, the model may also be used ``in reverse'' 
+to convert a
 letter into its parameters, given the model. The parameters of user-drawn
 letters may therefore be used in order to incorporate the capabilities for the
 learning algorithm to adapt to the user's feedback via demonstration.
@@ -404,13 +391,12 @@ demonstration ${\bf x}_{demo}$, the associated parameters may be determined as i
 
 The parameters which are determined for a shape in (\ref{eq:param}) will not
 reconstruct the shape exactly if $N<2n$, but rather will reconstruct the closest
-point in the $N$-dimensional space which the eigenvectors span. $N=10$ has been
-used for the work presented.
+point in the $N$-dimensional space which the eigenvectors span.
 
 For the statistical shape model employed by the system, the method for
 responding to user demonstrations is to move the learning algorithm's parameters
 towards those of the demonstration. In the results presented in this work, the
-update equation shown in \ref{eq:update} has been used, where ${\bf p}$ is the
+linear update equation shown in (\ref{eq:update}) has been used, where ${\bf p}$ is the
 learned parameter vector at time step $k$, and $\alpha$ is the learning rate,
 between 0 and 1.  
 
@@ -419,37 +405,40 @@ between 0 and 1.
 p}^{(k)})\times\alpha
 \end{equation}
 
-It is possible that parameters ${\bf p}^{(k)}$ and ${\bf p}_{demo}$, which
-individually yield acceptable shapes, may produce parameters ${\bf p}^{(k+1)}$
-by which yield an unacceptable shape. The proposed method for adapting to user
-demonstration would not get stuck at such poor shapes, however: with further
-demonstrations of the same letter, the system would eventually approach the
-demonstration shape. As a result, the event of poor-looking intermediate letters
-would not limit the interaction later proposed in Section \ref{sec:experiment}
-in a technical sense, but it may influence the user's perception of the learning
-agent. It remains to be seen if it is necessary to avoid such an event
-mathematically.
-
 Figure \ref{fig:demonstrationShapes2} illustrates the response of the system to
-demonstrations from a child for the letter `u' using a learning rate of
+demonstrations from a child for the letter `s' using a learning rate of
 $\alpha=1/2$. 
 
 \begin{figure}[thpb]
     \centering
-    \includegraphics[width=0.3\textwidth]{figures/u_kids.png}
+    \includegraphics[width=0.45\textwidth]{figures/learningSdemo}
     \caption{\label{fig:demonstrationShapes2}Example of the learning algorithm
-    responding to user demonstration of shapes for the letter `u.'}
+    responding to user demonstration of shapes for the letter `s' (demonstrations received from two 7-8 year-old children).}
 \end{figure}
 
-% * <deanna.m.hood@gmail.com> 2014-09-04T09:19:16.057Z:
-%
-% improve img
-%
+It is possible that parameters ${\bf p}^{(k)}$ and ${\bf p}_{demo}$, which
+individually yield acceptable shapes, produce parameters ${\bf p}^{(k+1)}$
+which yield an unacceptable shape, especially if the demonstration shape is of a different style to that learnt at time $k$, as there are no restrictions imposed on parameter values. The proposed method for adapting to user
+demonstration would not get stuck at such poor shapes, however: with further
+demonstrations of the same letter, the system would eventually approach the
+demonstration shape (Figure \ref{fig:eDemo}. As a result, the event of poor-looking 
+intermediate letters
+would not limit the interaction later proposed in Section \ref{sec:experiment}
+in a technical sense, but it may influence the user's \emph{perception} of the learning
+agent. It remains to be seen if it is necessary to avoid such an event
+mathematically.
+
+\begin{figure}[thpb]
+    \centering
+    \includegraphics[width=0.3\textwidth]{figures/learningEdemo}
+    \caption{\label{fig:eDemo}Example of the learning algorithm
+    responding to user demonstration of shapes for the letter `e', passing through a parameter state which yields a poor letter (demonstrations received from a 7-8 year-old child).}
+\end{figure}
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{An Embodied Handwriting Learning Agent with the Nao Humanoid Robot}
+\section{An Embodied Handwriting Learning Agent with the NAO Humanoid Robot}
 \label{sec:robotWriting}
 
 In order to develop a teachable agent that is appropriate for engaging a child
@@ -457,26 +446,26 @@ through the learning by teaching paradigm,
 %- that is, that it is an embodied agent, capable of eliciting motor mimicry,
 %and capable of causing its teacher to reflect on the process that has been used
 %to respond to handwriting feedback -
-capabilities for the robot to engage in handwriting have been established.
+capabilities for the robot to engage in handwriting and interactive turn-taking have been established.
 
-The Nao humanoid robot, which has been developed by Aldebaran-Robotics and
+The {\sc nao} humanoid robot, which has been developed by Aldebaran Robotics and
 designed purposely to look approachable \cite{Gouaillier2008}, has been used for
 this work. It is a commercially affordable biped robot, 58cm tall, with 25
 degrees of freedom, two cameras, speech capabilities and the ability to
 autonomously execute a range of tasks.
 
-%Because of the challenges in getting the Nao to write trajectories smoothly
+%Because of the challenges in getting the {\sc nao} to write trajectories smoothly
 %because of its inherent ability to only reach discrete points in space, 
 A fine level of control over what the robot is writing is necessary in the
 proposed application of a learning agent in the context of handwriting. Because
 of the limited fine motor skills possible with such an affordable robot, in
 addition to the absence of force feedback and other technical necessities, the
-Nao has been configured to use simulated handwriting with a synchronised tablet
+{\sc nao} has been configured to use simulated handwriting with a synchronised tablet
 to achieve this level of control. The necessary components of implementing the
 proposed teachable robotic agent are, therefore:
 
 \begin{enumerate}
-    \item developing capabilities for the robot to trace handwriting, 
+    \item developing capabilities for the robot to trace handwriting ``in the air'', 
 
     \item synchronising the robot's movements with the display of the writing on a
         tablet so that it seems that the robot is causing the handwriting to
@@ -496,10 +485,9 @@ appear smoother than would be achievable with a writing instrument. However, the
 robot's motions must still sufficiently match the displayed trajectory in order
 capture the engagement of the child user in the action. Aldebaran's NaoQi API
 has been used for the inverse kinematics of the trajectory following. The Robot
-Operating System (ROS)\footnote{The ROS stack for Nao is available at:
-\url{http://wiki.ros.org/nao_robot}} has been used for integration of the Nao
-with external reference frames using the $tf$ transformation library
-\cite{Foote2013}, such as the tablet's location.
+Operating System (ROS)\footnote{The ROS stack for {\sc nao} is available at:
+\url{http://wiki.ros.org/nao_robot}.} has been used for integration of the {\sc nao}
+with external reference frames, such as the tablet's location, using the $tf$ transformation library \cite{Foote2013}.
 
 When using simulated handwriting, it is no longer necessary that the robot
 engages in the typical style of handwriting, with a writing instrument at a desk.
@@ -515,10 +503,7 @@ presented:
         needing the tablet to be within arm's reach.
 
     \item Concerns about whether or not the child would start mimicking the
-        robot's incorrect (inhuman) writing style are mitigated. % * <deanna.m.hood@gmail.com> 2014-09-04T09:59:44.707Z:
-%
-% is this point significant enough?
-%
+        robot's incorrect writing form (\eg pen grip) are mitigated. 
 
     \item Perhaps most significantly, the accuracy of the matching of the
         robot's motion with the trajectory displayed on the tablet is not as
@@ -534,21 +519,25 @@ presented:
         %    \includegraphics[width=0.4\textwidth]{figures/naoWriting1.png}
         %}%
         \subfigure{
-            \includegraphics[width=0.9\linewidth]{figures/naoWriting2.png}
+            \includegraphics[width=0.8\linewidth]{figures/naoWriting2.png}
         }%
 %
     \end{center}
     \caption{A demonstration of the robot simulating the writing of a word with
     its finger. The motion of the robot is synchronised with the display of the
-    tablet, communicating over ROS.}%
+    tablet, communicating over ROS.\protect\footnotemark}%
 
    \label{fig:naoWriting}
 \end{figure}
+\footnotetext{See
+\url{https://www.youtube.com/watch?v=2qWFSJRxCU0} for a video of the synchronised writing 
+demonstration. }
 
 Therefore, the system presented utilises the context where the robot is
 simulating handwriting by pointing at the tablet\footnote{Teachers interviewed
 for their feedback on the system advised that children are asked to draw letters
-in the air in a similar manner as part of their handwriting education.}. As
+in the air in a similar manner as part of their handwriting education. The behaviour 
+is hence not unfamiliar to children.}. As
 interacting with a tablet with one's finger is not uncommon, this may aid the
 acceptance of the writing style by users. 
 
@@ -573,7 +562,7 @@ networking between the tablet and the robot, such as the overheads associated
 with connections, ports, message formats, etc. have been simplified. 
 
 An Android application has been developed to receive the trajectory message over
-a ROS topic and add each point of the trajectory one by one as a frame of an
+a ROS topic and display the trajectory as an
 animation. Synchronisation between the tablet and the robot has been achieved by:
 
 \begin{itemize}
@@ -608,25 +597,12 @@ writing process.
 
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=0.45\textwidth]{figures/chilitagDetection_cameraOverlay.png}
+    \includegraphics[width=0.35\textwidth]{figures/chilitagDetection_cameraOverlay.png}
     \caption{\label{fig:tabletDetection}Detection of the tablet using a fiducial
-    marker to represent the origin of the writing surface frame. The robot's
-    camera image is on the left (the text trajectory overlay is also visible).}
+    marker to represent the origin of the writing surface frame, visualised in RViz. The robot's
+    camera image is on the left, with the text trajectory overlay visible.}
 
-\end{figure}% * <deanna.m.hood@gmail.com> 2014-09-04T11:21:59.328Z:
-%
-% this image is pretty bad, and doesn't add much
-%
-
-
-A demonstration of the robot executing a trajectory in synch with the tablet is
-shown in Figure \ref{fig:naoWriting}\footnote{See
-\url{https://www.youtube.com/watch?v=2qWFSJRxCU0} for a video of the
-demonstration. }.
-% * <deanna.m.hood@gmail.com> 2014-09-04T11:40:30.176Z:
-%
-% this sounds dumb on paper.....
-%
+\end{figure}
 
 
 \subsection{Integration into a Robotic Agent}
@@ -636,14 +612,14 @@ learning algorithm presented in Section \ref{sec:learningAlgorithm} involves the
 integration of three components: the robot, the tablet, and a central controller
 (Figure~\ref{fig:archi}).  The robot and Android tablet application present the
 writing process/result to the user, as in Section \ref{sec:tabletSynch}.
-Furthermore, the tablet application is extended to act as the primary medium for
+Furthermore, the tablet application has been extended to act as the primary medium for
 capturing user interaction, and publishes the user's demonstrations when user is
 satisfied with their writing. The user demonstrations are received by the
 interaction controller, running on a desktop computer. It is responsible for
-getting the Nao to prompt and respond appropriately to feedback received, using
+getting the {\sc nao} to prompt and respond appropriately to feedback received, using
 a finite state machine to manage the interaction stage and various system
-inputs. It also manages the learning algorithm, by inferring the letter which
-user demonstrations are for, based on their position on the tablet, and
+inputs. The controller also manages the learning algorithm, by inferring the letter which
+user demonstrations are for based on their position on the tablet, and
 publishes the shapes to be written which are generated by the learning algorithm
 in response to the feedback.  
 
@@ -673,9 +649,9 @@ in response to the feedback.
     \node at (0,0)[cmpt, fill=Cyan!50] (tactile) {tactile interaction \\ manager};
     \node[cmpt, fill=Cyan!50, left=of tactile] (display) {display \\ manager};
   
-    \node [cmpt, fill=Turquoise!50, below=of tactile] (shape) {shape position \\ manager};
-    \node [cmpt, fill=Turquoise!50, left=of shape] (learner) {letter \\ learner};
-    \node [cmpt, fill=Turquoise!50, left=of learner] (card) {card \\ detector};
+    \node [cmpt, fill=Green!50, below=of tactile] (shape) {shape position \\ manager};
+    \node [cmpt, fill=Green!50, left=of shape] (learner) {letter \\ learner};
+    \node [cmpt, fill=Green!50, left=of learner] (card) {card \\ detector};
 
     \node [cmpt, fill=YellowOrange!50, below=1.5cm of shape] (writer) {nao writer};
     \node [cmpt, fill=YellowOrange!50, left=of writer] (tablet) {tablet detector};
@@ -707,7 +683,9 @@ in response to the feedback.
 \end{tikzpicture}
 }
 
-\caption{Overview of the system. The top row runs on the tablet, the middle row on the central controller and the bottom row on the robot.}
+\caption{Overview of the system. Components in the top row run on the tablet, 
+those in the middle row on the central controller, and those in the bottom row 
+on the robot.}
 
     \label{fig:archi}
 \end{figure}
@@ -723,7 +701,7 @@ in response to the feedback.
 
 In addition to constituting a technically novel system, the presented teachable
 robotic agent represents a tool which may be used for investigating social and
-pedagogical research questions. One such question is what impact the addition of
+pedagogical research questions. For example, one such question is what impact the addition of
 such a teachable robotic agent would have on the outcomes of a typical
 handwriting intervention. 
 
@@ -744,7 +722,7 @@ robot, which consists of the following stages.
 
     \item The robot responds to the word request verbally, and writes the
         letters by pointing at the tablet and imitating tracing the letters. The
-        tablet, placed in front of the robot with a vertical orientation,
+        tablet, placed in front of the robot with a vertical, landscape orientation,
         displays the letters in synchronisation with the robot's movements. 
 
     \item The robot asks for feedback from the participant and they demonstrate
@@ -764,8 +742,9 @@ robot, which consists of the following stages.
     \item The controller produces an adapted letter for the robot to write in
         response to the participant's feedback, and the interaction iterates,
         with participants taking turns to interact with the robot if necessary.
-        When the child is satisfied with the robot's performance on all letters,
-        they may use the ``test'' card and an additional word on which they will
+        When the participant(s) is/are satisfied with the robot's performance on 
+	all letters,
+        they may use the ``test'' card and an additional word for which they will
         verbally evaluate the robot's performance. 
 
 \end{enumerate}
@@ -804,15 +783,13 @@ robot, which consists of the following stages.
    \label{fig:pilotInteraction}
 \end{figure}
 
-\subsection{Outcomes of Preliminary Studies}% * <deanna.m.hood@gmail.com> 2014-09-05T08:43:38.105Z:
-%
-% I guess this is what we call the non-experiments.. Are the dates important?
-%
-% ^ <deanna.m.hood@gmail.com> 2014-09-09T09:11:57.672Z.
+\subsection{Outcomes of Preliminary Studies}
 
-Preliminary studies at two schools in the Geneva area have been conducted to
-evaluate the feasibility and technical soundness of the interaction system
-proposed. A pilot study at the first school consisted of four groups of
+Preliminary studies at two schools in the Geneva area, involving more than 50 children, 
+have been conducted to evaluate the feasibility and technical soundness of the 
+interaction system proposed. 
+
+A pilot study at the first school consisted of four groups of
 approximately 8 english-speaking children, aged 6-7 years. The children
 interacted with the system for a total of 65 minutes, with the robot writing 96
 letters, 49 of which in response to demonstrations from the children. 
@@ -820,12 +797,12 @@ letters, 49 of which in response to demonstrations from the children.
 As a result of the pilot study, two key observations were acted on. The first
 was that children appeared to have a difficult time providing demonstrations to
 the robot in the same place as previously-written letters. At the time, the
-system required the children to write ontop of a letter of the same type as the
+system required the children to write on top of a letter of the same type as the
 one which they were demonstrating, and the children seemed to find this
 counter-intuitive and would occasionally just trace the robot's letter as it
 appeared. As such, the technical components of the system were extended to allow
 the children the opportunity to write around previously-written letters instead
-of just ontop. 
+of just on top. 
 
 The second key point which came from the pilot study was that children were
 observed giving advice to the child designated as the letter demonstrator,
@@ -837,11 +814,10 @@ number of children interacting with the robot.
 %the context of children tutoring the robot, but also children interacting as
 %peer tutors with each other.
 
-The study at the second school involved 21 french-speaking students: 7 children
+The study at the second school involved 21 french-speaking students aged 7-8 years: 7 children
 interacted with the robot by themselves, and 7 sessions included the remaining
 14 students interacting with the robot in pairs. The duration of the sessions
-was between 8 and 15 minutes, with an average of 11.4 minutes (standard
-deviation of 2.3). % * <deanna.m.hood@gmail.com> 2014-09-05T09:25:41.865Z:
+was between 8 and 15 minutes, with an average of 11.4 minutes (SD = 2.3). % * <deanna.m.hood@gmail.com> 2014-09-05T09:25:41.865Z:
 %
 % We prompted them when time was short, didn't we? Or did they just say test
 % whenever they wanted to...
@@ -849,14 +825,10 @@ deviation of 2.3). % * <deanna.m.hood@gmail.com> 2014-09-05T09:25:41.865Z:
 
 
 The following conclusions were successfully drawn about the system as a result
-of the study at the second school:
+of the study at the second school.
 
-\begin{itemize}% * <deanna.m.hood@gmail.com> 2014-09-05T09:34:46.545Z:
-%
-% taking this out of bullet points gains extra space in paper if needed
-%
 
-    \item \textbf{The simulated robotic writing was believed by the children in all
+    \textbf{The simulated robotic writing was believed by the children in all
     cases.} There were, at times, 
     % * <deanna.m.hood@gmail.com> 2014-09-05T11:59:03.640Z:
     %
@@ -867,22 +839,22 @@ of the study at the second school:
     this was accepted by the children. To allow the children an opportunity to
     express doubt in the robot's ability to write without explicitly asking them if
     the robot was pretending, the children were asking if they believed that the
-    robot would be able to write its name, \emph{Nao}, which had not previously been
+    robot would be able to write its name, \emph{{\sc nao}}, which had not previously been
     demonstrated. It was reasoned that this would prompt the children to question
-    the point of the robot actually \emph{writing} if they had any concerns that
-    they were being fooled, but this was never the case. In the event where the
-    robot's writing was not synchronised with the tablet, this did not affect the
-    response of the child. If older children participate in the interaction study,
-    which may be likely as children with lasting handwriting difficulties are used
-    as participants, it may become more important to invest time into the
-    believability of the robot's writing scheme. however for 6-8 year olds the
+    the point of the robot actually \emph{writing} if they had any suspicion that
+    the robot was pretending, but this was never the case. In the event where the
+    robot's writing was not correctly synchronised with the tablet, this did not affect the
+    response of the child. If older children participate in the interaction study --
+    which may be likely as children with lasting handwriting difficulties are included
+    as participants -- it may become more important to invest time into the
+    believability of the robot's writing scheme. However, for 6-8 year olds the
     proposed setup has been proven viable.
 
-    \item \textbf{The children were engaged in teaching the robot.} % * <deanna.m.hood@gmail.com> 2014-09-05T09:54:48.069Z:
+    \textbf{The children were engaged in teaching the robot.} % * <deanna.m.hood@gmail.com> 2014-09-05T09:54:48.069Z:
     %
     % maybe this is too strong as a 'conclusion' and should just be an observation. plus what does this even mean.. the child walking around the room was 'engaged' too...?
     %
-    An average of 10.9 demonstration letters (standard deviation of 4.4) were
+    An average of 10.9 demonstration letters (SD = 4.4) were
     provided to the robot for each session during the interaction. Furthermore,
     in 9 out of the 14 sessions (64\%), the robot received demonstration letters
     \emph{after} reaching the test stage of the interaction. The participants'
@@ -894,7 +866,7 @@ of the study at the second school:
     % I guess it could have also come from us sitting there watching them
     %
 
-    \item \textbf{All children believed that the robot was learning, and that
+    \textbf{All children believed that the robot was learning, and that
         they were the ones teaching it.} This was concluded from their responses
         when the children were asked directly. This is in contrast to a prior
         feasibility study for a version of the interaction which only allowed
@@ -909,32 +881,72 @@ of the study at the second school:
     %, and also their reaction to the ``test word'' written by the robot at the end of the interaction. In X\% of cases, the child concluded that the robot had `passed' the test, or congratulated it in some way.
 
 
-    \item \textbf{The system has been validated as a technically sound
+    \textbf{The system has been validated as a technically sound
         autonomous interaction.} The interaction setup including the teachable
         robotic agent withstood the interaction for a total of 160 minutes, with
         the robot writing 335 letters, 152 of which in response to
-        demonstrations received from the 21 children. During this time, the
-        technical components of the system operated autonomously, with only the
-        verbal interaction being maintained by an observing researcher, and only
-        required intervention for the three instances that the robot fell later
-        in the day.% * <deanna.m.hood@gmail.com> 2014-09-05T10:49:26.786Z:
-    %
-    % could probably get away without mentioning this....
-    %
+        demonstrations received from the 21 children. During this time, technical 
+	intervention was only required for the three instances that the robot fell 
+	later in the day. Otherwise, the technical components of the system operated 
+	autonomously and as expected over the sessions.
+        %, with only verbal interaction for prompting being required from an observing researcher.
 
-\end{itemize}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Towards Long-term Interventions}
+\section{Towards Long-term Interventions}\label{sec:futureWork}
+%why is this title going into the margins....
 
-As noted in the introduction, existing literature on handwriting interventions
-agrees to consider 20 hours spread over 20 weeks as a reasonable intervention
-duration to measure actual effects. This directly questions how suitable is our
-approach for such long-term interactions, and raises several challenges, both
-technical and human.
+As noted in the introduction, a conclusion drawn in~\cite{Hoy2011} is that any 
+handwriting intervention studies considered in the systematic review which involved 
+fewer than two practice sessions per week and fewer than a total of 20 practice 
+sessions, including homework, were not found to demonstrate effective results. This 
+highlights the necessity to engage students in an interaction which will be sustainable
+ over the long-term if we wish to move towards using the proposed system to answer 
+research questions which involve the measurement of learning gains to gauge effects. 
+Several challenges are raised in developing such long-term capabilities for the system,
+ from both technical and socialogical points of view. %not sure this makes sense
 
-In the scope of open technical questions, it remains to be seen how shape models
+In terms of the interaction experience, the current experimental setting, while
+technically autonomous, can not robustly recover from situations outside of the
+nominal protocol (presented in Section~\ref{sec4}), and consequently still
+requires the presence of an experimenter. The interaction state machine would
+require extension in non-trivial ways to allow for long, fully autonomous
+interactions with children.
+
+In the current system, the robot can ask questions and prompt participants, but it 
+cannot engage in discussions with the participants. It is clear that work is necessary 
+to develop the conversational agent in the interaction so that the presence of an 
+experimenter is not required for a captivating engagement. While there is the 
+possiblity to focus the interaction design on group-based interaction with the robot 
+in order to alleviate the necessity of a conversational agent, there is reason to 
+suggest that constructing such a social interaction is not a trivial task. Anectodes 
+from the preliminary studies have shown that some children may criticise another's 
+demonstrations to the robot, which may or may not be as damaging to a child's 
+self-efficacy as when they are criticised in a typical educational context. In addition,
+on occassions where a pair of children came to teach the robot different styles of a 
+particular letter, they did not discuss with each other their different writing styles 
+and the effect on the teaching efficiency. This may suggest that a social context in 
+which verbalising opinions about differences is encouraged is necessary to get children 
+to cooperate in teaching the robot.  
+%- "Would have problems with the 'n'" - (8) projecting human learning characteristics.
+%- awkward silence, speaking over the top of the robot to talk to experimenter....
+%- Children saying the other was bad... (3, 9).
+%- When one child wrote u differently to the other, they didn't discuss :(
+
+How the child's perception of the robot as a learning agent may change over the 
+long-term remains to be seen. On one occasion during the preliminary studies, a 
+child's response to whether the {\sc nao} could write its own name included that it 
+may have problems with the `n', as the child had been correcting the robot on this 
+letter. This suggests that users may project human-like learning features, such as 
+forgetfulness, onto the robot, which may or may not actually be technically present 
+in the learning agent. This may need to be capitalised on when considering how to 
+extend the interaction for the long-term, as the present system with a learning rate 
+such that progress is evident to the user will cause convergence for a letter within a 
+few iterations.
+
+In the scope of open technical questions for enabling long-term interaction, it remains to be seen how shape models
 for letters might be generated which capture the full range of mistakes typical
 of children learning handwriting: extending the current system capable of
 incorporating internal proportion and global deformation errors to one which can
@@ -945,39 +957,34 @@ facilitate this, the current system has conceptual (a PCA only approach can not
 generate or learn a different shape topology) and technical (no support for
 multi-stroke shapes) limitations which need to be overcome.
 
-In terms of the interaction experience, the current experimental setting, while
-technically autonomous, can not robustly recover from situations outside of the
-nominal protocol (presented in Section~\ref{sec4}), and consequently still
-requires the presence of an experimenter. The interaction state machine would
-require to be extended in non-trivial ways to allow for long, fully autonomous,
-interactions with children. Also, further research may discover how to best
-model/limit the learning speed of the robot so that it is noticeably learning
-while not improving so fast as to limit the long-term interaction potential for
-the system, which may turn out to be child-dependent.
-
-On the educational side, open questions include how the handwriting error
+If the system is extended to allow for a wider range of mistakes, a further question 
+then is how the handwriting error
 generation of the system may be abstracted to a higher level of control so that
 a teacher may configure it to work with a child on a particular type of
 mistakes, based on the child's performance. Where would the balance lie between
 developing autonomous capabilities for the system to determine the child's
 difficulties, and empowering the teaching staff to decide for themselves
-instead? And, as a result, the ultimate question for this area of research is
-to address what impact to the outcomes of a long-term handwriting intervention the
-addition of such a teachable robotic agent would have: does it impact the
-motivation of the participants, their self-esteem, and/or the learning gains
-that they experience? We are currently considering running a long-term study
-that would provide better evidences to answer these questions.
+instead? 
+
+With some of the challenges towards an engaging long-term handwriting intervention 
+with the teachable robotic partner addressed, further steps can be made towards 
+answering the ultimate question of what impact to the outcomes of interventions the 
+addition of such a teachable robotic agent would have, including with respect to the 
+participants' self-esteem, motivation, or learning gains. % does it impact the
+%motivation of the participants, their self-esteem, and/or the learning gains
+%that they experience? We are currently considering running a long-term study
+%that would provide better evidences to answer these questions.
 
 
 %In addition to the conclusions which 
 %Anecdotes which raise questions:
-%- "Would have problems with the 'n'" - (8) projecting human learning characteristics. Another said "programmed to write badly" (4)
-%- Children saying the other was bad... (3, 9). Child saying the other child's was good (5). Child saying the robot was better than him (9).
-%- When one child wrote u differently to the other, they didn't discuss :(
+% Another said "programmed to write badly" (4)
+% Child saying the other child's was good (5). Child saying the robot was better than him (9).
+
 %- so many of them wanted to write the whole word.. robot says "show me a word" and maybe misleading
 %- not seeming to notice small changes (12) but maybe from experimenter
 %
-%- awkward silence, speaking over the top of the robot to talk to experimenter....
+
 %- child walking around
 %- word very close to robot's camera
 %
@@ -991,16 +998,21 @@ that would provide better evidences to answer these questions.
 %- unnecessary (unsent) demo from child 11 after it was acceptable but not perfect
 
 
+\addtolength{\textheight}{-.0cm}   % This command serves to balance the column lengths
+                                  % on the last page of the document manually. It shortens
+                                  % the textheight of the last page by a suitable amount.
+                                  % This command does not take effect until the next page
+                                  % so it should come on the page before the last. Make
+                                  % sure that you do not shorten the textheight too much.
 
+\section{Impact and Conclusion}\label{sec:conclusions}
 
-\section{Impact and Conclusion}
-
-We believe this article introduces three noteworthy contributions: an innovative
+We believe that this article introduces three noteworthy contributions: an innovative
 application of data processing and artificial intelligence for the generation and
 learning of hand-written letters suitable for educative purposes; a robotic
-system that has been experimentally proven to provide convincing scaffolding for
+system which has been experimentally proven to provide convincing scaffolding for
 complex human-robot interactions (teacher-learner social interactions, learning by
-demonstration); an initial experimental investigation of what appears to be a
+demonstration, simulated robotic fine motor skills); and an initial experimental investigation of what appears to be a
 new role for robots in education.
 
 Specifically, the technical challenges involved in developing a teachable
@@ -1010,7 +1022,7 @@ work include:
 \begin{itemize}
 
     \item developing capabilities for a robot with limited fine motor
-        capabilities, such as the Nao, to engage in the act of handwriting in a
+        capabilities, such as the {\sc nao}, to engage in the act of handwriting in a
         way which is believable for interacting with children. This has been
         accomplished by leveraging simulated handwriting with a synchronised
         tablet;
@@ -1030,7 +1042,8 @@ work include:
         engaging children in the learning by teaching paradigm, accomplished by
         fusing the robotic drawing capabilities and the learning algorithm for
         handwritten letters established with a central controller which manages
-        the flow of the interaction and turn taking, etc.
+        the flow of the interaction, turn taking and integration of the connected 
+	devices.
 
 \end{itemize}
 
@@ -1041,37 +1054,37 @@ fostered by this research. The work presented here investigates a particular
 role for a robot in the education of handwriting: not only the robot is actively
 performing the activity (it draws letters), but it does so in a way that engages
 the child in a very specific social role. The child is the teacher, the robot is
-the learner: the child must engage in a (meta-)cognitive relation with the robot
+the learner: the child must engage in a (meta-)cognitive relationship with the robot
 to try to understand why the robot fails and how to help it best.  Here, the
 robot is not only an activity facilitator or orchestrator: its physical presence
-and embodiment induce agency and anthropomorphizing, and cognitively engage the
-child into the learning activity, which we predict to lead to higher learning
+and embodiment induce agency and anthropomorphising, and cognitively engage the
+child into the learning activity, which we predict will lead to higher learning
 efficacy.
 
 Also notable, the robot is not used in the usual context of robotics or computer
-education, but instead in an activity -- handwriting -- that requires fine
+education, but instead in an activity -- handwriting -- which requires fine
 physical skills. In such activities, the embodied nature of the robot makes a
 lot of sense (due to motor mimicry, the arm motion for instance is, \emph{by
-itself}, part of the teaching). Along those lines, we hope to see more research
+itself}, part of the teaching). Along these lines, we hope to see more research
 on non-STEM educational applications of robotics.
 
 Beyond handwriting, we believe that this work provides a novel perspective on
 the role for robots in the education landscape. \emph{Learning by teaching} is a
-powerful paradigm because not only its pedagogical efficacy is proven, but it
-also positively impacts the child's motivation and self-esteem. We have
-discovered that it is also a very relevant context of use for robots. Indeed,
-when facing a child with school difficulties, robots can play a role (being the
-``even more ignorant student'') that neither the adults nor the peers (because
-of the social effects it would induce) can convincingly play.
+powerful paradigm because of not only its pedagogical efficacy, but its
+potential to positively impact the child's motivation and self-esteem. We hope that 
+this article shows that this is a very relevant context of use for robots. Indeed,
+when facing a child with school difficulties, robots can play a role of a na\"ive 
+learner which neither the adults nor the peers (because of the social effects it would 
+induce) can convincingly play.
 
 The strong social impact of early school problems makes research in this field
 a certainly useful challenge for HRI.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%\section{ACKNOWLEDGMENTS}
+\section*{Acknowledgments}
 
-%The authors gratefully acknowledge the contribution of National Research Organization and reviewers' comments.
-
+This research was supported by the Swiss National Science Foundation through the
+National Centre of Competence in Research Robotics.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
