@@ -75,7 +75,7 @@
 %(DH) abstract probably too long...
 %(DH) do we have to be specific somewhere about what stage of handwriting we're targeting..?
 
-Presented is a robotic partner which children can teach handwriting. It is
+This article presents the first known robotic partner which children can teach handwriting. It is
 hypothesised that such a system could not just engage an unmotivated student,
 but could also present the opportunity for children to experience the typical
 benefits encountered during human-led handwriting interventions, such as motor
@@ -262,14 +262,15 @@ eigenvectors, weighted by the parameter vector ${\bf p}$.
 If there is correlation between the points in the observations, there will be
 eigenvalues of the covariance matrix which are close to zero. As such, removing
 the associated eigenvectors from ${\bf \Phi}$ allows for dimensionality
-reduction with minimal impact. Indeed, the amount of variance in the dataset
-that is explained by each eigenvector ${\bf v}_i$ is $\sqrt{\lambda_i}$, and
-therefore the proportion of the variance explained by each dimension/eigenvector
-is as shown in (\ref{eq:proportionVar}).
-
-\begin{equation}\label{eq:proportionVar}
-\%var_i = \frac{\sqrt{\lambda_i}}{\sum_{i=1}^{N}\sqrt{\lambda_i}}\times 100\%
-\end{equation}
+reduction with minimal impact. 
+%Indeed, the amount of variance in the dataset
+%that is explained by each eigenvector ${\bf v}_i$ is $\sqrt{\lambda_i}$, and
+%therefore the proportion of the variance explained by each dimension/eigenvector
+%is as shown in (\ref{eq:proportionVar}).
+%
+%\begin{equation}\label{eq:proportionVar}
+%\%var_i = \frac{\sqrt{\lambda_i}}{\sum_{i=1}^{N}\sqrt{\lambda_i}}\times 100\%
+%\end{equation}
 
 For the dataset presented in Figure \ref{fig:deviations_sPrint}, the
 eigenvectors associated with the 3 largest eigenvalues explain 78.5\% of the
@@ -407,7 +408,7 @@ p}^{(k)})\times\alpha
 
 Figure \ref{fig:demonstrationShapes2} illustrates the response of the system to
 demonstrations from a child for the letter `s' using a learning rate of
-$\alpha=1/2$. 
+$\alpha=1/2$.  Note that even poorly-written demonstrations allow the system to improve.
 
 \begin{figure}[thpb]
     \centering
@@ -519,7 +520,7 @@ presented:
         %    \includegraphics[width=0.4\textwidth]{figures/naoWriting1.png}
         %}%
         \subfigure{
-            \includegraphics[width=0.8\linewidth]{figures/naoWriting2.png}
+            \includegraphics[width=0.6\linewidth]{figures/naoWriting2.png}
         }%
 %
     \end{center}
@@ -898,13 +899,13 @@ of the study at the second school.
 \section{Towards Long-term Interventions}\label{sec:futureWork}
 %why is this title going into the margins....
 
-As noted in the introduction, a conclusion drawn in~\cite{Hoy2011} is that any 
+A conclusion drawn in~\cite{Hoy2011} is that any 
 handwriting intervention studies considered in the systematic review which involved 
 fewer than two practice sessions per week and fewer than a total of 20 practice 
 sessions, including homework, were not found to demonstrate effective results. This 
 highlights the necessity to engage students in an interaction which will be sustainable
  over the long-term if we wish to move towards using the proposed system to answer 
-research questions which involve the measurement of learning gains to gauge effects. 
+research questions which involve the measurement of learning gains to gauge effectiveness. 
 Several challenges are raised in developing such long-term capabilities for the system,
  from both technical and socialogical points of view. %not sure this makes sense
 
@@ -921,7 +922,7 @@ to develop the conversational agent in the interaction so that the presence of a
 experimenter is not required for a captivating engagement. While there is the 
 possiblity to focus the interaction design on group-based interaction with the robot 
 in order to alleviate the necessity of a conversational agent, there is reason to 
-suggest that constructing such a social interaction is not a trivial task. Anectodes 
+believe that constructing such a social interaction is not a trivial task. Anectodes 
 from the preliminary studies have shown that some children may criticise another's 
 demonstrations to the robot, which may or may not be as damaging to a child's 
 self-efficacy as when they are criticised in a typical educational context. In addition,
@@ -935,15 +936,15 @@ to cooperate in teaching the robot.
 %- Children saying the other was bad... (3, 9).
 %- When one child wrote u differently to the other, they didn't discuss :(
 
-How the child's perception of the robot as a learning agent may change over the 
+How the children's perception of the robot as a learning agent may change over the 
 long-term remains to be seen. On one occasion during the preliminary studies, a 
-child's response to whether the {\sc nao} could write its own name included that it 
+child's response to whether or not the {\sc nao} could write its own name included that it 
 may have problems with the `n', as the child had been correcting the robot on this 
 letter. This suggests that users may project human-like learning features, such as 
 forgetfulness, onto the robot, which may or may not actually be technically present 
 in the learning agent. This may need to be capitalised on when considering how to 
-extend the interaction for the long-term, as the present system with a learning rate 
-such that progress is evident to the user will cause convergence for a letter within a 
+extend the interaction for long time frames, as the present system -- with a learning rate 
+such that progress is evident to the user -- will cause convergence for a letter within a 
 few iterations.
 
 In the scope of open technical questions for enabling long-term interaction, it remains to be seen how shape models
@@ -969,7 +970,7 @@ instead?
 With some of the challenges towards an engaging long-term handwriting intervention 
 with the teachable robotic partner addressed, further steps can be made towards 
 answering the ultimate question of what impact to the outcomes of interventions the 
-addition of such a teachable robotic agent would have, including with respect to the 
+addition of such a teachable robotic agent would have, including the effect on the 
 participants' self-esteem, motivation, or learning gains. % does it impact the
 %motivation of the participants, their self-esteem, and/or the learning gains
 %that they experience? We are currently considering running a long-term study
@@ -1077,8 +1078,8 @@ when facing a child with school difficulties, robots can play a role of a na\"iv
 learner which neither the adults nor the peers (because of the social effects it would 
 induce) can convincingly play.
 
-The strong social impact of early school problems makes research in this field
-a certainly useful challenge for HRI.
+The strong social impact of early educational problems makes research in this field
+an undoubtably meaningful challenge for HRI.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Acknowledgments}
