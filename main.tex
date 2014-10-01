@@ -29,7 +29,7 @@
 %(DH) is it too soon to claim learning by teaching benefits in the title...? 
 %(DH) the paper is not about "learning handwriting", it's about the robot.
 \title{\LARGE \bf
-``Those who can't do, teach'': a Teachable Robotic Agent for Children Learning Handwriting
+``Those Who Can't Do, Teach'': A Teachable Robotic Agent for Children Learning Handwriting
 }
 
 % \numberofauthors{3} 
@@ -60,11 +60,6 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-% * <deanna.m.hood@gmail.com> 2014-09-05T11:44:33.364Z:
-%
-% capitalise inside the phrase?
-%
-
 
 %%% HRI 2015 -> double-blind review process
 
@@ -102,7 +97,7 @@ level which they were satisfied with.
 Furthermore, the system represents a
 significant step towards an innovative use for robotics which addresses a
 widespread and socially meaningful challenge in education, and provides context
-for robotics in education beyond the well-explored use of teaching coding- and
+for robotics in education beyond the well-explored use of teaching coding and
 robotics-related subjects.
 
 \end{abstract}
@@ -185,7 +180,10 @@ the use of a robot instead as the teachable agent in the presented work:
         for investigating the use of a humanoid robot capable of physically
         demonstrating handwriting trajectories to its child learning partner.
 \end{enumerate}
-
+% * <deanna.m.hood@gmail.com> 2014-10-01T02:59:34.808Z:
+%
+% the article cited is not explained well enough
+%
 Consequently, the learning agent developed has been embodied in a commercially
 affordable {\sc nao} humanoid robot. Its writing capabilities have been implemented by
 leveraging synchronisation with a tablet display to simulate fine motor skills
@@ -206,8 +204,8 @@ addressing wider pedagogical research questions in education. Finally, Section \
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{A Learning Agent in the Context of Handwriting} \label{sec:learningAlgorithm}
 
-For the development of a reinforcement learning algorithm in the context of
-handwriting, a parameterisation of letters and their deformities has been sought
+For the development of a learning algorithm in the context of
+handwriting, a parameterisation of letters and their deformities was sought
 which is capable of generating the necessary letter models. Depending on the parameters input to
 the letter models, different quality shapes should be generated. The system can
 therefore be configured to improve its writing by modifying the parameters used
@@ -286,11 +284,11 @@ modelling approach to produce compact parameterisation of shapes.
 % in the end this was pointless so maybe not worth mentioning
 %
 PCA has been performed on all of the paths of a particular allograph in the
-dataset at a time, to reduce the $2n$-dimensional space to one of a desired
+dataset individually, to reduce the $2n$-dimensional space to one of a desired
 number of dimensions. $N=10$ has been used for the work presented.
 
 (\ref{eq:projection}) may also be used
-to generate new shapes based on the parameters ${\bf p}$ which are used: ${\bf
+to generate new shapes based on the parameters ${\bf p}$ which are used. ${\bf
 p}={\bf 0}$ will yield the mean shape, and variations to each of the $N$ values
 in ${\bf p}$ will cause a change in the shape represented by the corresponding
 eigenvector (Figure \ref{fig:deviations_sPrint}). 
@@ -333,7 +331,10 @@ parameter values which lie within the observed range in the dataset, it is
 possible to produce letters which are more likely to be reasonable looking.
 When the parameter values are outside of the range observed in the dataset, they
 are less likely to represent shapes from the dataset of reasonable,
-adult-written letters, and as a result are more likely to represent poor shapes.
+adult-written letters, and as a result are more likely to represent poor shapes.% * <deanna.m.hood@gmail.com> 2014-10-01T04:12:39.275Z:
+%
+% are adults legible?
+%
 Figure \ref{fig:sampleLetters} illustrates sample letters generated from the
 models of `e' and `g' by selecting random values for the first 5 parameters 
 from a distribution with
@@ -365,7 +366,7 @@ the same general categories. Using a database of children's letters when
 available may yield potential for parameterising other mistakes made by
 children, such as merging strokes or decomposing a shape into multiple subparts
 inappropriately. Nevertheless, sufficient capabilities for the shape model to
-generate `poor' letters which are appropriate for simulating a na\"ive learning
+generate `poor' letters which are appropriate for simulating a na\"ive learner
 in the context of handwriting have been demonstrated, using the shape model
 generated from PCA on a dataset of only adults' writing.
 
@@ -374,7 +375,7 @@ generated from PCA on a dataset of only adults' writing.
 
 It was shown in Section \ref{sec:writingGeneration} how the statistical shape
 model of a particular letter may convert a set of parameters into a generated
-letter of the same allograph. Similarly, the model may also be used ``in reverse'' 
+letter. Similarly, the model may also be used ``in reverse'' 
 to convert a
 letter into its parameters, given the model. The parameters of user-drawn
 letters may therefore be used in order to incorporate the capabilities for the
@@ -414,13 +415,18 @@ $\alpha=1/2$.  Note that even poorly-written demonstrations allow the system to 
     \centering
     \includegraphics[width=0.45\textwidth]{figures/learningSdemo}
     \caption{\label{fig:demonstrationShapes2}Example of the learning algorithm
-    responding to user demonstration of shapes for the letter `s' (demonstrations received from two 7-8 year-old children).}
+    responding to user demonstration of shapes for the letter `s' (demonstrations received from two 7-8 year-old children).}% * <deanna.m.hood@gmail.com> 2014-10-01T04:25:20.590Z:
+%
+% confusing
+%
 \end{figure}
 
 It is possible that parameters ${\bf p}^{(k)}$ and ${\bf p}_{demo}$, which
 individually yield acceptable shapes, produce parameters ${\bf p}^{(k+1)}$
-which yield an unacceptable shape, especially if the demonstration shape is of a different style to that learnt at time $k$, as there are no restrictions imposed on parameter values. The proposed method for adapting to user
-demonstration would not get stuck at such poor shapes, however: with further
+which yield an unacceptable shape. This is especially true if the demonstration
+shape is of a different style to that learnt at time $k$ as there are no
+restrictions imposed on parameter values. The proposed method for adapting to
+the demonstration shape has the ability to recover, however: with further
 demonstrations of the same letter, the system would eventually approach the
 demonstration shape (Figure \ref{fig:eDemo}. As a result, the event of poor-looking 
 intermediate letters
@@ -449,16 +455,16 @@ through the learning by teaching paradigm,
 %to respond to handwriting feedback -
 capabilities for the robot to engage in handwriting and interactive turn-taking have been established.
 
-The {\sc nao} humanoid robot, which has been developed by Aldebaran Robotics and
-designed purposely to look approachable \cite{Gouaillier2008}, has been used for
+The {\sc nao} humanoid robot, which has been developed by Aldebaran Robotics and 
+purposely designed to look approachable \cite{Gouaillier2008}, has been used for
 this work. It is a commercially affordable biped robot, 58cm tall, with 25
 degrees of freedom, two cameras, speech capabilities and the ability to
 autonomously execute a range of tasks.
 
 %Because of the challenges in getting the {\sc nao} to write trajectories smoothly
 %because of its inherent ability to only reach discrete points in space, 
-A fine level of control over what the robot is writing is necessary in the
-proposed application of a learning agent in the context of handwriting. Because
+Precise control over what the robot is writing is necessary in the
+proposed application of a learning agent in this context. Because
 of the limited fine motor skills possible with such an affordable robot, in
 addition to the absence of force feedback and other technical necessities, the
 {\sc nao} has been configured to use simulated handwriting with a synchronised tablet
@@ -469,7 +475,7 @@ proposed teachable robotic agent are, therefore:
     \item developing capabilities for the robot to trace handwriting ``in the air'', 
 
     \item synchronising the robot's movements with the display of the writing on a
-        tablet so that it seems that the robot is causing the handwriting to
+        tablet so that it appears that the robot is causing the handwriting to
         display because of its actions, and
 
     \item integrating the writing behaviour with the handwriting learning
@@ -484,7 +490,7 @@ These steps are presented in the sections which follow.
 Using simulated handwriting provides an opportunity for the robot's writing to
 appear smoother than would be achievable with a writing instrument. However, the
 robot's motions must still sufficiently match the displayed trajectory in order
-capture the engagement of the child user in the action. Aldebaran's NaoQi API
+capture the engagement of the child participant in the action. Aldebaran's NaoQi API
 has been used for the inverse kinematics of the trajectory following. The Robot
 Operating System (ROS)\footnote{The ROS stack for {\sc nao} is available at:
 \url{http://wiki.ros.org/nao_robot}.} has been used for integration of the {\sc nao}
@@ -1082,10 +1088,11 @@ The strong social impact of early educational problems makes research in this fi
 an undoubtably meaningful challenge for HRI.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Acknowledgments}
+% Anonymized for double-blind review
+%\section*{Acknowledgments}
 
-This research was supported by the Swiss National Science Foundation through the
-National Centre of Competence in Research Robotics.
+%This research was supported by the Swiss National Science Foundation through the
+%National Centre of Competence in Research Robotics.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
