@@ -22,29 +22,43 @@ We did not intend to claim such a contribution, but we can understand how the mi
 >    further consequence of this issue is that novelty is not sufficiently
 >    addressed by the authors. This work needs to be properly situated.
 
-We agree, and will remedy this in the revision. We will cover the work of others at the intersection of robotics and learning by teaching, and greatly appreciate the numerous provided pointers to the literature. 
+We agree and greatly appreciate the numerous provided pointers to the literature. 
 After accordingly reconsidering the literature on learning by teaching in robotics -- that we will appropriately present --, it
-appears that learning by teaching a task with a physical component (moreover at such a fine level) is still 100% novel.
+appears that learning by teaching applied to a task with a physical component is still 100% novel.
 
->    - The writing needs major revision, since it’s highly verbose, includes
->    poorly justified assertions, and is generally very difficult to read.
->    Despite the content of the research being very straightforward, I found
->    parsing most sentences/paragraphs of this paper quite frustrating. More
->    information in the Presentation section below.
+>    The presentation is the largest issue with this paper. Issues with
+>    examples are below.
 >
->    - Some of the conclusions made about the system’s validation are poorly
->    justified. More info in the Soundness section.
+>    - highly verbose (and often redundant)-
+>
+>    I think that this paper could be condensed to a 5-page paper without
+>    losing any content. Doing so should also dramatically increase its
+>    readability. Some examples of how writing could become more concise and
+>    clearer are below.
 
-We will address these points in the sections below.
+>    - vague writing -
+>
+>    “provides context for robotics in education” - What is meant by
+>    context here?
+>
+>    “which is capable of generating the necessary letter models” -
+>    Necessary according to what criteria?
 
->    - The authors appear to violate double-blindness in up to 3 ways: by
->    providing a URL to their code that contains “EPFL”, an apparent self
->    citation “Learning to write with a robot” from EPFL (given that this
->    paper claims to be the “first known robotic partner which children can
->    teach handwriting”, I assume that this citation is the same project),
->    and an apparent experimenter’s face appearing in Figure 8.
+All points have been well taken and the feedback will be incorporated to improve readability.
 
-This was an oversight on our side and we apologise for letting it go undetected.
+>    Also, I recommend removing “Those who cannot do, teach” from the
+>    title. This phrase is an insult to teachers, and it’s unclear how
+>    it’s relevant to this work.
+
+The title was meant to re-purpose the idiom in the context of children with handwriting difficulties having an opportunity to improve through teaching. We appreciate this reviewer bringing to light the potential for this to strike a nerve with teachers and will accept their recommendation. 
+
+>    The weaknesses of the paper lay in the part, in which the results of the
+>    interaction study are reported. Unfortunately, the presentation lacks any
+>    standards. I got the impression that the analyses are ongoing. Only for
+>    some observations (duration of a session), descriptive statistics are
+>    provided.
+
+We have provided also the number of demonstrations for each group, and have refrained from reading further into the data because a full study with large sample sizes has not been completed. The work presented was intended for verification of the technical soundness of the system with children, in line with the theme.
 
 >    The authors do not assess how educational their system is. I can accept
 >    that at this point in the research, which seems sufficient for a
@@ -67,7 +81,6 @@ This was an oversight on our side and we apologise for letting it go undetected.
 
 We agree that this was a wording issue on our part and will make reference to the classification methods used in previous work to determine such categories, and the confirmation that was received by teachers that the deformations are similar to childrens'.
 
->
 >    (2) To assess whether the children believed that the letter-writing
 >    trajectories shown on the tablet were being created by the robot, the
 >    children were asked whether the robot could write its own name. This
@@ -100,12 +113,6 @@ The deformations are meaningful in the sense that if a teacher wishes to create 
 
 Initial parameters were drawn from a range chosen to generate shapes for letters 'e' and 's' which would elicit correction. For the other letters, parameters were fixed, generating shapes which some groups chose to correct (e.g. 13/14 for 'n' and 2/14 for 'c'). We agree that more detail is to be included about the wording of the questions to support the claims, and can include the information on both.
 
->    For the robot-drawn letters that were
->    not “in response to demonstrations from the children”, were they all
->    from new words?
-
-Yes, we will clarify.
-
 >    The authors do a good job of citing related work on the educational side
 >    of their work. However, the paper must situate itself amongst other work
 >    on robots and simulated agents that act as teachers, pupils, or
@@ -132,25 +139,14 @@ Yes, we will clarify.
 
 Again, we agree and will comply, and would like to thank the reviewer for their time in compiling this list.
 
->    The presentation is the largest issue with this paper. Issues with
->    examples are below.
->
->    - highly verbose (and often redundant)-
->
->    I think that this paper could be condensed to a 5-page paper without
->    losing any content. Doing so should also dramatically increase its
->    readability. Some examples of how writing could become more concise and
->    clearer are below.
+>    - The authors appear to violate double-blindness in up to 3 ways: by
+>    providing a URL to their code that contains “EPFL”, an apparent self
+>    citation “Learning to write with a robot” from EPFL (given that this
+>    paper claims to be the “first known robotic partner which children can
+>    teach handwriting”, I assume that this citation is the same project),
+>    and an apparent experimenter’s face appearing in Figure 8.
 
->    - vague writing -
->
->    “provides context for robotics in education” - What is meant by
->    context here?
->
->    “which is capable of generating the necessary letter models” -
->    Necessary according to what criteria?
-
-All points have been well taken and the feedback will be incorporated to improve readability.
+This was an oversight on our side and we apologise for letting it go undetected.
 
 >    “a shape center of 0” - What’s really meant here is that the
 >    normalized trajectory points average 0, correct? (If so, this quotation
@@ -215,12 +211,6 @@ We can clarify that we indeed refer to a shape with its centre at the origin, no
 
 We agree with each of the points made; they will be addressed.
 
->    Also, I recommend removing “Those who cannot do, teach” from the
->    title. This phrase is an insult to teachers, and it’s unclear how
->    it’s relevant to this work.
-
-The title was meant to re-purpose the idiom in the context of children with handwriting difficulties having an opportunity to improve through teaching. We appreciate this reviewer bringing to light the potential for this to strike a nerve with teachers and will accept their recommendation. 
-
 >    The work is very sound, although it's unclear which parts of the shape
 >    modeling algorithm are novel.  This review is written under the
 >    assumption that the idea of shape modeling is not novel, but that using
@@ -242,14 +232,6 @@ We believe the technical details to be relevant for those wishing to replicate t
 
 We agree that this is interesting future work; it has been mentioned on page 7.
 
->    The weaknesses of the paper lay in the part, in which the results of the
->    interaction study are reported. Unfortunately, the presentation lacks any
->    standards. I got the impression that the analyses are ongoing. Only for
->    some observations (duration of a session), descriptive statistics are
->    provided.
-
-We have provided also the number of demonstrations for each group, and have refrained from reading further into the data because a full study with large sample sizes has not been completed. The work presented was intended for verification of the technical soundness of the system with children, in line with the theme.
-
 >    The presentation of the results needs to be revised. I suggest that the
 >    authors specify information about: (i) the participants (what age groups
 >    were interacting with the robot) and (ii) the procedure (by referring to
@@ -262,4 +244,10 @@ We have provided also the number of demonstrations for each group, and have refr
 >    results or to analyze how the interaction differed in these groups.
 
 It will be more clearly stated that the results presented were from the 7-8yr age group only, not those aged 6-7 in the pilot study.
+
+>    For the robot-drawn letters that were
+>    not “in response to demonstrations from the children”, were they all
+>    from new words?
+
+Yes, we will clarify.
 
