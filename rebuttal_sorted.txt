@@ -216,7 +216,7 @@ We agree with each of the points made; they will be addressed.
 >    assumption that the idea of shape modeling is not novel, but that using
 >    the model to generate "bad" examples is.  Otherwise, the system design
 >    and evaluation are excellent.
-
+DONE
 This is accurate and will be clarified in the section on the shape modeling algorithm.
 
 >    -- as mentioned above, the authors should consider reducing the space
