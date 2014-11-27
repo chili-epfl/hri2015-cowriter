@@ -45,6 +45,8 @@ DONE
 >
 >    “which is capable of generating the necessary letter models” -
 >    Necessary according to what criteria?
+DONE
+
 
 All points have been well taken and the feedback will be incorporated to improve readability.
 

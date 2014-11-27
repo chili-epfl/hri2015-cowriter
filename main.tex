@@ -198,13 +198,13 @@ addressing wider pedagogical research questions in education. Finally, Section \
 \section{A Learning Agent in the Context of Handwriting} \label{sec:learningAlgorithm}
 
 For the development of a learning algorithm in the context of
-handwriting, a parameterisation of letters and their deformities was sought
-which is capable of generating the necessary letter models. Depending on the parameters input to
-the letter models, different quality shapes should be generated. The system can
-therefore be configured to improve its writing by modifying the parameters used
-to generate the letters, based on feedback from the reinforcement learning
-partner. To this end, a method which can generate a model from real-world data
-has been employed in order to capture realistic variations in letters. 
+handwriting, a parameterisation of letters and their deformities was sought such 
+that different quality shapes can be generated, depending on the parameters input to
+the letter models. This allows the system to be configured to improve its writing 
+by modifying the parameters used to generate the letters, based on feedback from the 
+reinforcement learning partner as addressed in Section \ref{sec:learningAlg}. 
+%To this end, a method which can generate a model from real-world data
+%has been employed in order to capture realistic variations in letters. 
 
 \subsection{Shape Modelling of Letters} \label{sec:writingGeneration}
 
@@ -363,7 +363,7 @@ in the context of handwriting have been demonstrated, using the shape model
 generated from PCA on a dataset of only adults' writing.
 
 
-\subsection{Responding to Feedback}
+\subsection{Responding to Feedback}\label{sec:learningAlg}
 
 It was shown in Section \ref{sec:writingGeneration} how the statistical shape
 model of a particular letter may convert a set of parameters into a generated
