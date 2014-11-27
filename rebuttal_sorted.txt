@@ -152,7 +152,7 @@ This was an oversight on our side and we apologise for letting it go undetected.
 >    normalized trajectory points average 0, correct? (If so, this quotation
 >    is both vague and incorrect, since the trajectory and the shape it makes
 >    are not the same thing.)
-
+DONE
 We can clarify that we indeed refer to a shape with its centre at the origin, not 0-average trajectory.
 
 >    - overuse of actor removal -
