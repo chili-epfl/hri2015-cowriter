@@ -103,7 +103,7 @@ We agree with the points raised: it is a limitation of the question, which we im
 >    PCA is insufficient to claim the the deformations are meaningful.
 >    Further, the word “meaningful” lacks grounding (what exactly does it
 >    mean here)?
-
+DONE
 The deformations are meaningful in the sense that if a teacher wishes to create initial letters with a particular feature (a 'd' with a large loop, for example), it is possible with this system. We will clarify that it is the ability to create varied levels of deformations which may be ascribed descriptive interpretations (not just numerical) that is the desired outcome.
 
 >    Additionally, more information is needed about the evaluation. How was
