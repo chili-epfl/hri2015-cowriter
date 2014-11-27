@@ -40,6 +40,8 @@ appears that learning by teaching applied to a task with a physical component is
 >
 >    “provides context for robotics in education” - What is meant by
 >    context here?
+DONE
+
 >
 >    “which is capable of generating the necessary letter models” -
 >    Necessary according to what criteria?
