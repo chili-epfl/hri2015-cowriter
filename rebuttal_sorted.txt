@@ -107,7 +107,10 @@ DONE
 The deformations are meaningful in the sense that if a teacher wishes to create initial letters with a particular feature (a 'd' with a large loop, for example), it is possible with this system. We will clarify that it is the ability to create varied levels of deformations which may be ascribed descriptive interpretations (not just numerical) that is the desired outcome.
 
 >    Additionally, more information is needed about the evaluation. How was
->    the initial parameter vector for a letter drawn? With what wording were
+>    the initial parameter vector for a letter drawn? 
+DONE
+
+>    With what wording were
 >    children asked whether they believed “the robot was learning and that
 >    they were the ones teaching it”? 
 
