@@ -686,14 +686,17 @@ robotic agent represents a tool which may be used for investigating social and
 pedagogical research questions. For example, one such question is what impact the addition of
 such a teachable robotic agent would have on the outcomes of a typical
 handwriting intervention. 
-%Preliminary studies has been conducted to evaluate 
-%the feasibility of the system as a technical tool for such investigations.
+Preliminary studies at two schools in the Geneva area, involving more than 50 children, 
+have been conducted to evaluate the feasibility and technical soundness of the 
+interaction system proposed as a tool for such investigations.
 
 \subsection{Interaction Context}
 
-The interaction context which has been developed as a framework for addressing
-relevant research questions is one where participants are asked to improve the robot's
-handwriting by correcting its letters. Figure~\ref{fig:pilotInteraction}
+%The interaction context which has been developed as a framework for addressing
+%relevant research questions is 
+%Participants are asked to improve the robot's
+%handwriting by correcting the letters it writes on the tablet. 
+Figure~\ref{fig:pilotInteraction}
 illustrates an example interaction sequence between the participant and the
 robot which consists of the following stages:
 
@@ -729,12 +732,7 @@ robot which consists of the following stages:
 
 \end{enumerate}
 
-%To allow the system to take input from the user on which words to draw,
-%fiducial markers were placed on cards which were detectable by a
-%previously-developed ROS node processing a camera stream. A node which
-%processed the fiducial markers detected was then created to convert the card
-%detected into an appropriate message for the controller. 
-	
+
 \begin{figure}[thpb!]
      \begin{center}
 %
@@ -763,11 +761,8 @@ robot which consists of the following stages:
    \label{fig:pilotInteraction}
 \end{figure}
 
-\subsection{Outcomes of Preliminary Studies}
+\subsection{Outcomes of Preliminary Study 1}
 
-Preliminary studies at two schools in the Geneva area, involving more than 50 children, 
-have been conducted to evaluate the feasibility and technical soundness of the 
-interaction system proposed. 
 
 A pilot study at the first school consisted of four groups of
 approximately 8 english-speaking children each, aged 6-7 years. The children
@@ -792,96 +787,83 @@ potentially giving rise to a higher level paradigm of learning by
 followed at the second school was designed to further observe the effect of the
 number of children interacting with the robot.
 
-The study at the second school involved 21 french-speaking students aged 7-8 years: 7 children
+\subsection{Outcomes of Preliminary Study 2}
+The study at the second school involved 21 french-speaking students aged 7-8 years. 7 children
 interacted with the robot individually and 7 sessions included the remaining
-14 students interacting with the robot in pairs. The duration of the sessions
-was between 8 and 15 minutes, with an average of 11.4 minutes (SD = 2.3). 
+14 students interacting with the robot in pairs.
 Initial parameters were drawn from a range purposely chosen to generate shapes 
 for letters 'e' and 's' which would elicit correction. For the other letters, 
 parameters were fixed, generating shapes which some groups chose to correct 
-(e.g. 13/14 for 'n' and 2/14 for 'c').
+(e.g. 13/14 for 'n' and 2/14 for 'c'). The duration of the sessions
+was between 8 and 15 minutes, with an average of 11.4 minutes (SD = 2.3). 
 
-The following conclusions were successfully drawn about the system as a result
-of the study at the second school.
+%The following conclusions were successfully drawn about the system as a result
+%of the study at the second school.
 
+It has been concluded following the second study that the system has 
+been validated as a technically sound autonomous interaction. 
+The interaction setup including the teachable
+robotic agent withstood the interaction which lasted for a total of 160 minutes. 
+During this time the robot wrote 335 letters, 152 of which in response to
+demonstrations received from the 21 children. Technical 
+intervention was only required for the three instances that the robot fell 
+later in the day. Otherwise, the technical components of the system operated 
+autonomously and as expected over the sessions.
 
-    \textbf{The simulated robotic writing was believed by the children in all
-    cases.} There were, at times, 
-    % * <deanna.m.hood@gmail.com> 2014-09-05T11:59:03.640Z:
-    %
-    % how many
-    %
+Furthermore, no child indicated that they did not attribute the writing
+to the robot. There were, at times, 
     questions about the robot's writing method at the beginning of the interaction,
     but when advised that the robot ``tells the tablet what it wants to write,''
-    this was accepted by the children. To allow the children an opportunity to
-    express doubt in the robot's ability to write without explicitly asking them if
-    the robot was pretending, the children were asked if they believed that the
-    robot would be able to write its name, \emph{{\sc nao}} which had not previously been
-    demonstrated. It was reasoned that this would prompt the children to question
-    the point of the robot actually \emph{writing} if they had any suspicion that
-    the robot was pretending, but this was never the case. In the event where the
-    robot's writing was not correctly synchronised with the tablet, this did not affect the
-    response of the child. If older children participate in the interaction study --
+    this was accepted by the children. 
+%     To allow the children an opportunity to
+%     express doubt in the robot's ability to write without explicitly asking them if
+%     the robot was pretending, the children were asked if they believed that the
+%     robot would be able to write its name, \emph{{\sc nao}} which had not previously been
+%     demonstrated. It was reasoned that this would prompt the children to question
+%     the point of the robot actually \emph{writing} if they had any suspicion that
+%     the robot was pretending, but this was never the case. 
+    On the rare occasion that the
+    robot's writing was not correctly synchronised with the tablet, this did
+    not appear to influence the children's impression. 
+    If older children participate in the interaction study --
     which may be likely as children with lasting handwriting difficulties are included
     as participants -- it may become more important to invest time into the
     believability of the robot's writing scheme. However, for 6-8 year olds the
-    proposed setup has been proven viable.
+    proposed setup appears sufficient.
 
-    \textbf{The children were engaged in teaching the robot.} % * <deanna.m.hood@gmail.com> 2014-09-05T09:54:48.069Z:
-    %
-    % maybe this is too strong as a 'conclusion' and should just be an observation. plus what does this even mean.. the child walking around the room was 'engaged' too...?
-    %
-    An average of 10.9 demonstration letters (SD = 4.4) were
+Regarding the engagement of the children in teaching the robot, 
+    an average of 10.9 demonstration letters (SD = 4.4) were
     provided to the robot for each session during the interaction.
     In 9 out of the 14 sessions (64\%), the robot received demonstration letters
     \emph{after} reaching the test stage of the interaction. The participants'
     teaching after the test word had been written and evaluated -- the only
     purposefully imposed external motivation -- may suggest that by that time
     the participants had become intrinsically motivated to engage in the
-    interaction.% * <deanna.m.hood@gmail.com> 2014-09-05T10:30:45.293Z:
-    %
-    % I guess it could have also come from us sitting there watching them
-    %
+    interaction.
 
-    \textbf{All children believed that the robot was learning and that
-        they were the ones teaching it.} This was concluded from the responses
-        when the children were asked directly. This is in contrast to a prior
-        feasibility study for a version of the interaction which only allowed
-        for touch-based feedback, not user demonstrations, in which three of the
-        seven adult participants did not feel that it was their input which
-        helped the robot improve.
-        % * <deanna.m.hood@gmail.com> 2014-09-05T09:46:49.117Z:
-    %
-    % probably can't just casually mention this study without going into more detail...
-    %
+%     \textbf{All children believed that the robot was learning and that
+%         they were the ones teaching it.} This was concluded from the responses
+%         when the children were asked directly. This is in contrast to a prior
+%         feasibility study for a version of the interaction which only allowed
+%         for touch-based feedback, not user demonstrations, in which three of the
+%         seven adult participants did not feel that it was their input which
+%         helped the robot improve.
 
     %, and also their reaction to the ``test word'' written by the robot at the end of the interaction. In X\% of cases, the child concluded that the robot had `passed' the test, or congratulated it in some way.
 
 
-    \textbf{The system has been validated as a technically sound
-        autonomous interaction.} The interaction setup including the teachable
-        robotic agent withstood the interaction for a total of 160 minutes. During this
-        time the robot wrote 335 letters, 152 of which in response to
-        demonstrations received from the 21 children. During this time, technical 
-	intervention was only required for the three instances that the robot fell 
-	later in the day. Otherwise, the technical components of the system operated 
-	autonomously and as expected over the sessions.
-        %, with only verbal interaction for prompting being required from an observing researcher.
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Towards Long-term Interventions}\label{sec:futureWork}
-%why is this title going into the margins....
+\section{Towards Long-term Studies}\label{sec:futureWork}
+%How to break this section up?
 
-A conclusion drawn in~\cite{Hoy2011} is that any 
-handwriting intervention studies considered in the systematic review which involved 
+A conclusion drawn in a systematic review handwriting intervention studies \cite{Hoy2011} 
+is that any of the studies considered which involved 
 fewer than two practice sessions per week and fewer than a total of 20 practice 
 sessions, including homework, were not found to demonstrate effective results. This 
 highlights the necessity to engage students in an interaction which will be sustainable
- over the long-term in order to answer 
-research questions which involve the measurement of learning gains. 
+ over the long-term if 
+research questions which involve the measurement of learning gains are to be addressed. 
 Several challenges are raised in developing such long-term capabilities for the system,
  from both technical and sociological points of view. %not sure this makes sense
 
@@ -927,8 +909,8 @@ In the scope of open technical questions for enabling long-term interaction, it 
 for letters might be generated which capture the full range of mistakes typical
 of children learning handwriting. This includes extending the current system capable of
 incorporating internal proportion and global deformation errors to one which can
-also generate missing subparts of the letter, or break the letter down into
-primitive strokes, for example. While it is expected that incorporating a
+also generate missing subparts of the letter, or write letters backwards, for example. 
+While it is expected that incorporating a
 database of letters drawn by children into the shape modeling process would
 facilitate this, the current system has conceptual -- a PCA-only approach can not
 generate or learn a different shape topology -- and technical -- no support is currently implemented for
@@ -943,10 +925,9 @@ developing autonomous capabilities for the system to determine the child's
 difficulties and empowering the teaching staff to decide for themselves
 instead? 
 
-With some of the challenges towards an engaging long-term handwriting intervention 
-with the teachable robotic partner addressed, further steps can be made towards 
-answering the central question of what impact to the outcomes of interventions the 
-addition of such a teachable robotic agent would have, including the effect on the 
+With some of these challenges addressed, further steps can be made towards 
+answering the overarching question of what impact the 
+addition of such a teachable robotic agent would have on handwriting interventions, including the effect on the 
 participants' self-esteem, motivation, and learning gains. % does it impact the
 %motivation of the participants, their self-esteem, and/or the learning gains
 %that they experience? We are currently considering running a long-term study
@@ -1056,10 +1037,10 @@ an undoubtably meaningful challenge for robotics and human-robot interaction.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Anonymized for double-blind review
-%\section*{Acknowledgments}
+\section*{Acknowledgments}
 
-%This research was supported by the Swiss National Science Foundation through the
-%National Centre of Competence in Research Robotics.
+This research was supported by the Swiss National Science Foundation through the
+National Centre of Competence in Research Robotics.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
