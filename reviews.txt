@@ -1,0 +1,550 @@
+------------------------ Submission 2155, Review 4 ------------------------
+
+Title: "Those who can't do, teach": a Teachable Robotic Agent for Children Learning Handwriting
+
+Reviewer:           primary
+
+Expertise
+
+   3  (Knowledgeable)
+
+Summary of (Theme-specific) Contributions
+
+   This paper is a good fit for the Technologies theme since the central
+   focus and contribution relates to development of an autonomous
+   interactive system.
+
+Meta Review
+
+   The reviewers found the central focus of the paper compelling.  The paper
+   addresses an important research problem and the autonomous operation of
+   the robot during the teaching process is a significant strength of the
+   paper.
+
+
+   The reviewers raised several concerns regarding the paper:
+
+   - The coverage of related work in the field of robotics is entirely
+   insufficient for a conference paper.
+
+   - The authors should consider revising the title of the paper, since it
+   could be seen as offensive to educators.
+
+   - Reviewers were divided in their comments regarding the writing style,
+   though all three reviewers had suggestions for improvement.  The authors
+   should make revisions to improve clarity, focus and level of detail in
+   certain sections, as outlined in the reviews.  Increased use of active
+   voice is also recommended.
+
+   - R1 raises a number of concerns regarding the soundness of the
+   methodology.  We encourage the authors to respond to these concerns in
+   their rebuttal comments.
+
+   - One of the main contributions claimed by the authors, is the first
+   investigation of the use of robots in learning by teaching.  This
+   narrative will need to be significantly altered due to the presence of
+   prior work in this area, as listed in the reviews.  We recommend that
+   authors outline their plans for the relevant revisions in the rebuttal.
+
+   =======================
+
+   PC MEETING UPDATE: This paper was discussed at the PC meeting and
+   received with enthusiasm. The committee was excited by the system design
+   and appreciated the robust in situ deployment. Acceptance of the paper is
+   conditional on the following being addressed in the final version of the
+   paper: (1) The related work on robot learning needs to be appropriately
+   covered, specifically on teaching robots (including robot learning from
+   demonstration) and Tanaka and Matsuzoe’s (2012) work on learning from
+   teaching. (2) The current work then needs to be appropriately situated
+   within the related work review, without overstating the novelty claims.
+   (3) Claims reported in the user study need to be toned down, and limited
+   to only those that can be conclusively drawn from recorded data. (Or are
+   very clear whenever what is being reported is drawn from a qualitative
+   observation rather than a quantitative measure.) It is recommended that
+   reporting on the user study be discussed in terms of the technical
+   deployment and what can be concretely measured with respect to this,
+   rather than speculating on user acceptance and claims that cannot be
+   backed up with concrete measures.
+
+   =======================
+
+Recommendation
+
+   3  (Overall, I would not argue for or against this paper. I am truly on the fence.)
+
+
+------------------------ Submission 2155, Review 1 ------------------------
+
+Title: "Those who can't do, teach": a Teachable Robotic Agent for Children Learning Handwriting
+
+Reviewer:           external
+
+Expertise
+
+   4  (Expert)
+
+Summary of (Theme-specific) Contributions
+
+   This paper describes and attempts to validate aspects of an educational
+   robotic system that permits children to teach handwriting to the robot.
+
+   Author-claimed contributions:
+   1) A relatively inexpensive robot system that can write on a tablet in a
+   “believable” way (i.e., the child attributes the writing to the
+   robot).
+   2) PCA-based method for generating a range of letter styles, some of
+   which are of low quality, eliciting correction.
+   3) A component that converts child demonstrations of handwriting to an
+   incremental change in the parameter vector that the robot uses to
+   generate its letters, allowing the robot to learn from children’s
+   feedback.
+   4) An integrated system that autonomously learns handwriting from
+   children teachers.
+
+   These contributions fit the enabling technologies theme, but they appear
+   to fall short of the studies theme, since the account of the research
+   method is fairly high level (and missing some important information, as
+   discussed later) and it’s not clear that the result of this study is
+   “new understanding, principles, [or] design recommendations for HRI”.
+   Given that the paper fits the primary theme sufficiently, I do not
+   penalize it for falling short of the criteria for the studies theme.
+
+Strengths and Weaknesses
+
+   Strengths:
+
+   - A compelling application and an impressive system that mostly seems
+   well motivated.
+
+   - The topic is important and relevant to HRI.
+
+   - Good coverage of related work on the side of the educational aspect of
+   this work.
+
+
+   Weaknesses:
+
+   - Related work lacks any citations of research on teachable robots or
+   agents or even robots or agents that act as educational characters, which
+   is unacceptable. (I’m not counting the apparent self-citation.) A
+   further consequence of this issue is that novelty is not sufficiently
+   addressed by the authors. This work needs to be properly situated.
+
+   - The writing needs major revision, since it’s highly verbose, includes
+   poorly justified assertions, and is generally very difficult to read.
+   Despite the content of the research being very straightforward, I found
+   parsing most sentences/paragraphs of this paper quite frustrating. More
+   information in the Presentation section below.
+
+   - Some of the conclusions made about the system’s validation are poorly
+   justified. More info in the Soundness section.
+
+   - The authors appear to violate double-blindness in up to 3 ways: by
+   providing a URL to their code that contains “EPFL”, an apparent self
+   citation “Learning to write with a robot” from EPFL (given that this
+   paper claims to be the “first known robotic partner which children can
+   teach handwriting”, I assume that this citation is the same project),
+   and an apparent experimenter’s face appearing in Figure 8.
+
+Soundness
+
+   The authors do not assess how educational their system is. I can accept
+   that at this point in the research, which seems sufficient for a
+   conference publication. Instead, they attempt to validate the components
+   of their system. There is much to like in this validation: robot
+   interaction with a good number of children, adjustments to system design
+   based on observations, and autonomous interaction was largely successful
+   (i.e., didn’t need interventions unless robot fell over).
+
+   However, there are considerable issues with the methods and conclusions
+   within this validation.
+
+   (1) The authors claim their system can generate letters with
+   “inappropriate internal proportions” and “global deformations”
+   (which need definitions) based on the analysis described as follows:
+   “It would be reasonable to consider the shapes in Figure 2 in the same
+   general categories.” Calling something reasonable does not make it so.
+   The authors then make the unjustified claim that “sufficient
+   capabilities… have been demonstrated.”
+
+   (2) To assess whether the children believed that the letter-writing
+   trajectories shown on the tablet were being created by the robot, the
+   children were asked whether the robot could write its own name. This
+   question does not directly address believability, and there are plausible
+   interpretations of a “yes” answer that do not include the child
+   believing that the robot wrote what he or she saw on the tablet. For
+   instance, the child might think that the robot can write well but did not
+   actually write during the interaction. Thus, believability has not been
+   validated sufficiently. (Also, I recommend never saying that something is
+   generally “proven” when based on a limited sample.)
+
+   (3) “For example, for the model shown in Figure 1, the parameters may
+   represent the height of the top half of the letter compared to the bottom
+   half, the width of the overall shape, etc. Consequently, the shape
+   modelling process has produced the desired outcomes of parameterising the
+   shapes in ways which are able to be used to deform them meaningfully.”
+   - The author’s subjective appraisal of what variations are captured by
+   PCA is insufficient to claim the the deformations are meaningful.
+   Further, the word “meaningful” lacks grounding (what exactly does it
+   mean here)?
+
+   Additionally, more information is needed about the evaluation. How was
+   the initial parameter vector for a letter drawn? With what wording were
+   children asked whether they believed “the robot was learning and that
+   they were the ones teaching it”? For the robot-drawn letters that were
+   not “in response to demonstrations from the children”, were they all
+   from new words?
+
+Related Work
+
+   The authors do a good job of citing related work on the educational side
+   of their work. However, the paper must situate itself amongst other work
+   on robots and simulated agents that act as teachers, pupils, or
+   educational companions.
+
+   Relevant work includes Justin Werfel’s paper “Embodied Teachable
+   Agents: Learning by Teaching Robots”, Knox and Stone’s IJSR 2012
+   paper How Humans Teach Agents (which discusses the benefits of using
+   computational agents in lieu of human confederates in studies),
+   Tanaka’s “Children teach a care-receiving robot to promote their
+   learning: Field experiments in a classroom for vocabulary learning.”,
+   and Chase et al.’s “Teachable Agents and the Protege Effect…”.
+
+   On robots that interact educationally with people, there’s Kanda et
+   al.’s “Interactive robots as social partners and peer tutors for
+   children”, Kory and Breazeal’s “Storytelling with robots: Learning
+   companions for preschool children’s language development”, Leyzberg
+   et al.’s “Personalizing robot tutors to individuals’ learning
+   differences”, Chang et al.’s “Exploring the possibility of using
+   humanoid robots as instructional tools for teaching a second language in
+   primary school”, Johnson et al.’s “Design and early evaluation of
+   the rubi-5 sociable robots”, and Movellan et al.’s “Sociable robot
+   improves toddler vocabulary skills”.
+
+Presentation
+
+   The presentation is the largest issue with this paper. Issues with
+   examples are below.
+
+   - highly verbose (and often redundant)-
+
+   I think that this paper could be condensed to a 5-page paper without
+   losing any content. Doing so should also dramatically increase its
+   readability. Some examples of how writing could become more concise and
+   clearer are below.
+
+   Original: “An application which is yet to be explored, however, is that
+   of handwriting intervention.”
+
+   Revised (slightly shorter and with more connection to the previous
+   sentence): “Handwriting intervention is a previously unexplored
+   application of this paradigm.”
+
+   Original: “Presented is the development of the first known teachable
+   agent which is capable of artificially making mistakes typical of
+   children learning handwriting, and correcting them with external
+   feedback. Such a system therefore exhibits the potential to engage
+   children in the learning by teaching paradigm in the context of
+   handwriting.”
+
+   Revised: “We present the development of the first known teachable agent
+   that intentionally makes mistakes typical of children learning
+   handwriting. Through this capability, the robot can be taught by
+   children, who themselves may learn through their teaching.”
+
+   Original: “The robot responds to the word request verbally and writes
+   the letters by pointing at the tablet and imitating writing the letters.
+   The tablet, placed in front of the robot with a vertical, landscape
+   orientation, displays the letters in synchronisation with the robot’s
+   movements.”
+
+   Revised: “The robot writes the letters according to the method
+   described in Section X.”
+
+   An exception is the paragraph “However, we believe that…”, which is
+   concise and clear than the rest of the paper.
+
+   - vague writing -
+
+   “provides context for robotics in education” - What is meant by
+   context here?
+
+   “which is capable of generating the necessary letter models” -
+   Necessary according to what criteria?
+
+   “a shape center of 0” - What’s really meant here is that the
+   normalized trajectory points average 0, correct? (If so, this quotation
+   is both vague and incorrect, since the trajectory and the shape it makes
+   are not the same thing.)
+
+   - overuse of actor removal -
+
+   Perhaps in an attempt to strike a scholarly tone, the authors often
+   remove themselves as actors. There is some precedent for this in academic
+   writing, but here (and most places) it leads to ambiguity, a lack of
+   energy in the writing, and difficult-to-parse writing.
+
+   “The following conclusions were successfully drawn” - By whom? Easier
+   to read and more honest: “We drew the following conclusions”
+
+   “It was reasoned” -> “We reasoned”
+
+   “While it is expected that” -> “We expect that”
+
+   Honestly, I don’t actually know for sure who was doing the reasoning or
+   reporting their expectations above. I just assume it’s the authors. But
+   I don’t know because they removed the actor in these sentences.
+
+   - includes numerous poorly justified assertions and some bad logic -
+
+   Some larger examples are already in the Soundness section above, but
+   there are many smaller examples as well.
+
+   “experimentally proven to provide convincing scaffolding” -
+   Convincing according to what metric? Also, scaffolding itself was never
+   even mentioned before this (and thus was not actually assessed).
+
+   “tablet-based application, which children are increasingly recognizing
+   as a disposable technology.” This is a strong claim that lacks any
+   evidence or argumentation. It’s not even clear what it means for an app
+   to be “disposable”.
+
+   In point #2 at the end of the first page, the authors imply that a robot
+   can draw a letter but an app can only show it in a completely drawn state
+   (not draw it along a trajectory at handwriting speed), which is false.
+
+   - many long sentences that are difficult to read -
+
+   “With some of the challenges towards an engaging long- term handwriting
+   intervention with the teachable robotic partner addressed, further steps
+   can be made towards an- swering the central question of what impact to
+   the outcomes of interventions the addition of such a teachable robotic
+   agent would have, including the effect on the participants’
+   self-esteem, motivation, and learning gains.”
+
+   The last two bullets on the final page are much too long and difficult to
+   read.
+
+   Long sentences should be broken up for readability.
+
+   - definitions needed -
+
+   protege effect, inappropriate internal proportions, global deformations
+
+Suggestions
+
+   Please see above for specific suggestions.
+
+   Also, I recommend removing “Those who cannot do, teach” from the
+   title. This phrase is an insult to teachers, and it’s unclear how
+   it’s relevant to this work.
+
+Recommendation
+
+   This paper describes compelling work on an important project, but it
+   needs to be revised with a fine-tooth comb to be more readable. Further,
+   the paper needs more rigor with regards to its assertions and attempts to
+   validate the system. I encourage the authors to revise and resubmit this
+   interesting research.
+
+Overall Rating
+
+   3  (Overall, I would not argue for or against this paper. I am truly on the fence.)
+
+
+------------------------ Submission 2155, Review 2 ------------------------
+
+Title: "Those who can't do, teach": a Teachable Robotic Agent for Children Learning Handwriting
+
+Reviewer:           external
+
+Expertise
+
+   4  (Expert)
+
+Summary of (Theme-specific) Contributions
+
+   This paper contributes an autonomous HRI system for children to improve
+   their handwriting by teaching a robot to improve its handwriting.
+
+Strengths and Weaknesses
+
+   Originality: This work is original.
+
+   Novelty: This work is novel (although the authors should cite some
+   additional prior work on care-receiving robots; see the "Prior Work"
+   section of this review).
+
+   Relevance: This work is extremely relevant to HRI.
+
+Soundness
+
+   The work is very sound, although it's unclear which parts of the shape
+   modeling algorithm are novel.  This review is written under the
+   assumption that the idea of shape modeling is not novel, but that using
+   the model to generate "bad" examples is.  Otherwise, the system design
+   and evaluation are excellent.
+
+Related Work
+
+   The authors should cite the following, which is directly relevant to
+   their work:
+
+   Tanaka, F., & Matsuzoe, S. (2012). Children Teach a Care-Receiving Robot
+   to Promote Their Learning: Field Experiments in a Classroom for
+   Vocabulary Learning. Journal of Human-Robot Interaction, 1(1).
+   doi:10.5898/jhri.v1i1.12
+
+   More background on handwriting recognition and generation might be
+   helpful for the reader who is not expert in that area.
+
+Presentation
+
+   The presentation is very good, although some of the technical details on
+   synchronization could be omitted in favor of providing more detail on the
+   studies described.  The section on the studies (4.2) could also be split
+   into several sections to improve readability.
+
+Suggestions
+
+   -- the authors should reduce their claims that the idea of the robot as a
+   learner is a novel contribution of this paper, given the citation above.
+   The work is sufficiently interesting without this in any case.
+   -- as the authors mention, it remains to be seen what the effect is of
+   the system on learning handwriting
+   -- as mentioned above, the authors should consider reducing the space
+   dedicated to the synchronization (a technical challenge, to be sure, but
+   not especially interesting from a research perspective) and dedicate more
+   attention to the studies.
+   -- the authors might address how their system can deal with and/or
+   produce mistakes that aren't just deformations; e.g. writing a letter
+   backwards.
+
+Recommendation
+
+   It is always exciting to see a fully-autonomous human-robot interaction
+   study with children.  The poor-handwriting generation algorithm is clever
+   and the results are promising for continuing work in this area.
+
+Overall Rating
+
+   5  (Definite accept: I would argue strongly for accepting this paper.)
+
+
+------------------------ Submission 2155, Review 3 ------------------------
+
+Title: "Those who can't do, teach": a Teachable Robotic Agent for Children Learning Handwriting
+
+Reviewer:           external
+
+Expertise
+
+   3  (Knowledgeable)
+
+Summary of (Theme-specific) Contributions
+
+   The authors have developed a system (NAO and a tablet) that can be
+   applied in an interaction with children to enhance their handwriting. The
+   focus of the paper is on the system development, and first observations
+   from the interaction study are provided.
+
+Strengths and Weaknesses
+
+   The paper describes an innovative task in which robots can interact with
+   children for pedagogical purposes. The motivation for this task is very
+   well researched. A fully autonomous system is put into the interaction.
+   Furthermore, even though the authors apply a quite known “learning by
+   teaching paradigm”, they extend the potential of it describing some
+   very interesting observations (second key point). Accordingly, other
+   children were observed to give advice to the child designated as the
+   letter demonstrator. This behavior bears high potential for being
+   analyzed in terms of what knowledge is negotiated by the group of
+   children.
+
+   The weaknesses of the paper lay in the part, in which the results of the
+   interaction study are reported. Unfortunately, the presentation lacks any
+   standards. I got the impression that the analyses are ongoing. Only for
+   some observations (duration of a session), descriptive statistics are
+   provided.
+
+Soundness
+
+   The paper is well written. The presentation of the results needs to
+   follow a more standardized outline.
+
+Related Work
+
+   I suggest that the authors take Tanaka and Matsuzoe’s (2012) work on
+   learning by teaching paradigm into account.
+
+Presentation
+
+   The presentation of the results needs to be revised. I suggest that the
+   authors specify information about: (i) the participants (what age groups
+   were interacting with the robot) and (ii) the procedure (by referring to
+   Figure 8).
+   Another problem is that as the results are presented now, it seems like
+   no dependent measures were taken. In one observation, the authors refer
+   to the children’s responses but they never mention how many children
+   provided this kind of answer. With respect to the different age groups
+   that interacted, the authors need to either to focus on one in their
+   results or to analyze how the interaction differed in these groups.
+
+Suggestions
+
+
+Recommendation
+
+   While the paper has some weaknesses, it should be included in the
+   technical program as it makes important and interesting contributions to
+   (1) the system design and task that can be used in interaction with
+   children and (2) the learning by teaching paradigm. In addition, I think
+   that the presentation of the results can be revised and improved by the
+   authors.
+
+Overall Rating
+
+   4  (Probably accept: I would argue for accepting this paper.)
+
+
+------------------------ Submission 2155, Review 5 ------------------------
+
+Title: "Those who can't do, teach": a Teachable Robotic Agent for Children Learning Handwriting
+
+Reviewer:           secondary
+
+Expertise
+
+   4  (Expert)
+
+Summary of (Theme-specific) Contributions
+
+   This work introduces a paradigm that engages children as teachers of
+   robots for a handwriting task. The paradigm introduces a principled
+   method (with maths grounded in PCA) to generate poorly written letters
+   and then update the letter generation based on feedback from the child
+   teacher. The paradigm is implemented on a real system (NAO + tablet), and
+   assessed within a school environment. The results of the user study are
+   promising. The contributions of this work are very relevant for the field
+   of HRI.
+
+Secondary Meta Review
+
+   There is disagreement across reviewers with respect to overall rating
+   (2-5), but agreement about the topic being an important one for HRI.
+   Concerns were raised about the treatment of prior work, which the authors
+   commit to addressing. The authors' rebuttal claim that the application of
+   a teaching by learning paradigm to a physical skill is novel is somewhat
+   off base: for the human, it is a teaching by learning paradigm, but for
+   the robot, this is a learning from demonstration (LfD) paradigm---and
+   there is a large existing body of work on LfD applied to physical tasks
+   (including fine motor). While some concerns were raised about the
+   scientific methodology of the user studies, these were not shared by all
+   reviewers, and the development of this system (algorithm and hardware
+   implementation) and deployment within a school is a contribution in its
+   own right. Concerns were raised about the authors' overstating their
+   contributions and conclusions, which they commit to addressing.
+
+Recommendation
+
+   4  (Probably accept: I would argue for accepting this paper.)

@@ -119,7 +119,7 @@ the act of teaching another, has been shown to produce motivational,
 meta-cognitive, and educational benefits in a range of disciplines
 \cite{Rohrbeck2003}. The application of the paradigm to handwriting intervention
 is previously unexplored. One reason for this may due to the requirement of 
-an appropriately unskilled peer for the target child to tutor, which may present
+an appropriately unskilled peer for the target child to tutor, as this may present
 a logistical constraint if the target child is the lowest performer in their class. 
 In some cases, it may be appropriate for a
 peer or teacher to simulate a na\"ive learner for the target child to teach.
@@ -134,68 +134,38 @@ that intentionally makes mistakes typical of children learning
 handwriting. Through this capability, the robot can be taught by
 children, who themselves may learn through their teaching.
 
-Teachable computer-based agents have previously been used to encourage the ``protégé effect'',
-wherein students invest more effort into learning when it is for a teachable agent 
-than for themselves \cite{Chase2009}. Furthermore, robotic learning agents which 
-employ the learning by teaching paradigm have been developed in settings such as 
-vocabulary learning to take advantage of the engagement benefits in education. 
-This differs from the established work which has focused exclusively on
-on a robot learning physical skills for the benefit of the robot -- to play table 
-tennis, for example -- not the human teacher. Indeed, as the handwriting that
-the proposed robotic partner engages in is simulated and only for interaction 
-purposes, it does not have not depend on capabilities to improve its writing.
+Teachable computer-based agents have previously been used to encourage the 
+``protégé effect'', wherein students invest more effort into learning when it
+is for a teachable agent than for themselves \cite{Chase2009}. As we are 
+concerned with learning of a physical skill, the learning agent developed has 
+been embodied in a humanoid robot which is capable of physically demonstrating 
+handwriting trajectories to its child learning partner.
+This is supported by the potential for motor mimicry to yield significant 
+improvements in handwriting interventions in which letter formations are 
+demonstrated to participants \cite{Berninger1997}.
 
-We present the first known teachable agent which is capable
-of artificially making mistakes typical of children learning handwriting, and
-correcting them with external feedback. Such a system therefore exhibits the potential
-to engage children in the learning by teaching paradigm in the context of
-handwriting. Furthermore our work is concerned with learning of a physical skill, 
-and so a robot has been used as the teachable agent to exploit its embodied nature.
+A robotic learning agent which employs the learning by teaching paradigm has 
+previously been developed by Tanaka and Matsuzoe \cite{Tanaka2012}. In their
+system, children learn vocabulary by teaching the {\sc nao} robot to act out 
+verbs. The robot is tele-operated and mimics the actions that the children
+teach it, but with no long-term memory or learning algorithm in place.
+Our work instead focuses on an autonomous robotic partner which the child 
+can teach a physical skill.
+This differs from the established work of robots learning physical skills
+from demonstrations, which has focused exclusively on
+the robot learning physical skills for the benefit of the robot -- to play table 
+tennis, for example -- not the human teacher \cite{Werfel2014}. 
 
-Consequently, the learning agent developed has been embodied in a commercially
-affordable {\sc nao} humanoid robot. Its writing capabilities have been implemented by
-leveraging synchronisation with a tablet display to simulate fine motor skills
-otherwise infeasible for the robot. 
-This use of a humanoid robot capable of physically demonstrating handwriting 
-trajectories to its child learning partner is supported in this context by the potential 
-for motor mimicry to yield significant improvements in handwriting interventions 
-in which letter formations are demonstrated to participants \cite{Berninger1997}.
+%Indeed, as a commercially affordable robot is being used, the handwriting that
+%it engages in is in fact emph{simulated}, for interaction purposes, by 
+%leveraging synchronisation with a tablet display. Hence the system does not 
+%have, nor does it depend on, capabilities to improve its physical skills for
+%its own benefit.
 
-As the robot is pretending to write for the purpose of the interaction and is 
-therefore not able to improve on its physical skills itself, 
-This work represents the first teachable robotic agent which is 
-being taught a physical skill for the benefit of the human teacher, through the
-learning by teaching paradigm.
-
-%this part will be rearranged once prev work is involved:
-The teachable agent developed has the potential to be embedded as a simulated 
-computer-based agent, however there are three main points which have motivated 
-the use of a robot instead as the teachable agent in the presented work:
-
-\begin{enumerate}
-    \item the engagement and ``protégé effect'' elicited by teaching an embodied
-        agent is anticipated to be stronger than that associated with a
-        tablet-based application, which children are increasingly recognising as
-        disposable technology,% * <deanna.m.hood@gmail.com> 2014-09-08T11:07:10.004Z:
-%
-% ... citation needed?
-%
-
-    \item observing a teachable agent respond to what it has been taught
-        is a significant step in the learning by teaching
-        paradigm \cite{Okita2006}, and therefore it may be significant for the agent to respond
-        with a physical writing \emph{process}, rather than simply a product, and
-
-    \item the potential for motor mimicry to yield significant improvements in
-        handwriting interventions in which letter formations are demonstrated to participants \cite{Berninger1997} further supports the case
-        for investigating the use of a humanoid robot capable of physically
-        demonstrating handwriting trajectories to its child learning partner.
-\end{enumerate}
-
-Consequently, the learning agent developed has been embodied in a commercially
-affordable {\sc nao} humanoid robot. Its writing capabilities have been implemented by
-leveraging synchronisation with a tablet display to simulate fine motor skills
-otherwise infeasible for the robot. 
+Due to the intended use in a school environment, a commercially
+affordable {\sc nao} humanoid robot has been used. Its writing capabilities 
+have been implemented by leveraging synchronisation with a tablet display to
+simulate fine motor skills otherwise infeasible for the robot. 
 
 Within this article, Section \ref{sec:learningAlgorithm} presents the novel work in the area of
 artificial intelligence to develop a learning algorithm suitable for a teachable
