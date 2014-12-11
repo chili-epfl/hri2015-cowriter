@@ -118,8 +118,8 @@ children, who themselves may learn through their teaching.
 Teachable computer-based agents have previously been used to encourage the 
 ``protégé effect'', wherein students invest more effort into learning when it
 is for a teachable agent than for themselves~\cite{Chase2009}. As we are 
-concerned with learning of a physical skill, the learning agent developed has 
-been embodied in a humanoid robot which is capable of physically demonstrating 
+concerned with learning of a physical skill, the learning agent developed is 
+embodied in a humanoid robot which is capable of physically demonstrating 
 handwriting trajectories to its child learning partner.
 This is supported by the potential for motor mimicry to yield significant 
 improvements in handwriting interventions in which letter formations are 
@@ -158,8 +158,7 @@ addressing wider pedagogical research questions in education. Finally, Section \
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{A Learning Agent in the Context of Handwriting} \label{sec:learningAlgorithm}
 
-For the development of a learning algorithm in the context of
-handwriting, a parameterisation of letters and their deformities has been sought such 
+A parameterisation of letters and their deformities was sought such 
 that different quality shapes can be generated, depending on the parameters input to
 the letter models. This allows us to configure the system such as to improve its writing 
 by modifying the parameters based on feedback from the 
@@ -174,7 +173,7 @@ modelling is an application of principle component analysis (PCA), where a
 linear transform which de-correlates data vectors is found~\cite{Stegmann2002}
 and allows for dimensionality reduction. 
 
-PCA has been performed on a set of letter paths captured from a digital pen,
+PCA is performed on a set of letter paths captured from a digital pen,
 using the UJI Pen Characters 2 dataset \cite{Llorens2008} with 120 instances of
 each letter (2 repetitions from 60 adult users). While it may be appropriate in future work to
 identify the location of salient features of the shapes which are robust to 
@@ -214,7 +213,7 @@ reduction with minimal impact.
 {\bf \Phi} = [{\bf v}_1, {\bf v}_2, \ldots, {\bf v}_N]^T
 \end{equation}
 
-PCA has been performed on all of the paths of a particular allograph in the
+PCA is performed on all of the paths of a particular allograph in the
 dataset individually, to reduce the $2n$-dimensional space for that shape to one 
 with $N=10$ dimensions.
 As such,
@@ -353,7 +352,7 @@ demonstration ${\bf x}_{demo}$, the associated parameters may be determined as i
 For the statistical shape model employed by the system, the method for
 responding to user demonstrations is to move the learning algorithm's parameters
 towards those of the demonstration. In the results presented in this work, the
-linear update equation shown in (\ref{eq:update}) has been used, where ${\bf p}$ is the
+linear update equation shown in (\ref{eq:update}) is used, where ${\bf p}$ is the
 learned parameter vector at time step $k$, and $\alpha$ is the learning rate,
 between 0 and 1.  
 
@@ -405,7 +404,7 @@ in the learning by teaching paradigm, we have established capabilities for the r
 to engage in handwriting and interactive turn-taking.
 
 The {\sc nao} V4 humanoid robot, which has been developed by Aldebaran Robotics and 
-purposely designed to look approachable \cite{Gouaillier2008}, has been used for
+purposely designed to look approachable \cite{Gouaillier2008}, is used for
 this work. It is a commercially affordable biped robot, 58cm tall, with 25
 degrees of freedom, two cameras, speech capabilities and the ability to
 autonomously execute a range of tasks.
@@ -427,9 +426,9 @@ Using simulated handwriting provides an opportunity for the robot's writing to
 appear smoother than would be achievable with a writing instrument. However, the
 robot's motions must still sufficiently match the displayed trajectory in order
 capture the engagement of the child participant in the action. Aldebaran's NaoQi API
-has been used for the inverse kinematics of the trajectory following. The Robot
+is used for the inverse kinematics of the trajectory following. The Robot
 Operating System (ROS)\footnote{The ROS stack for {\sc nao} is available at:
-\url{http://wiki.ros.org/nao_robot}.} has been used for integration of the {\sc nao}
+\url{http://wiki.ros.org/nao_robot}.} is used for integration of the {\sc nao}
 with external reference frames, such as the tablet's location, 
 using the $tf$ transformation library \cite{Foote2013}.
 
@@ -501,7 +500,7 @@ with connections, ports, message formats, etc. have been simplified.
 
 An Android application has been developed to receive the trajectory message over
 a ROS topic and display the trajectory as an
-animation. Synchronisation between the tablet and the robot has been achieved by
+animation. Synchronisation between the tablet and the robot is achieved by
 using NTP servers to synchronise device clocks; passing only the necessary number of points (7)
 to the robot's motion planner to improve timing accuracy; and not running 
 computationally expensive tasks on the robot (such as camera publishing) while it 
@@ -948,7 +947,7 @@ work include:
 
     \item developing capabilities for a robot with limited fine motor
         capabilities, in particular the {\sc nao} robot, to engage in the act of handwriting in a
-        way which is believable for interacting with children. This has been
+        way which is believable for interacting with children. This is
         accomplished by leveraging simulated handwriting with a synchronised
         tablet communicating via ROS;
 
