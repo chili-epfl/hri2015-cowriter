@@ -1,4 +1,4 @@
-> Reviews of submission #2155: ""Those who can't do, teach": a Teachable
+﻿> Reviews of submission #2155: ""Those who can't do, teach": a Teachable
 > Robotic Agent for Children Learning Handwriting"
 
 We would like to thank each of the reviewers for contributing such time and their expertise to this review.
@@ -13,7 +13,7 @@ We address the reviewers' remarks below.
 >    -- the authors should reduce their claims that the idea of the robot as a
 >    learner is a novel contribution of this paper, given the citation above.
 >    The work is sufficiently interesting without this in any case.
-
+DONE
 We did not intend to claim such a contribution, but we can understand how the misunderstanding can arise from the second-last paragraph and the missing related robotics work. Both will be modified. 
 
 >    - Related work lacks any citations of research on teachable robots or
@@ -21,7 +21,7 @@ We did not intend to claim such a contribution, but we can understand how the mi
 >    is unacceptable. (I’m not counting the apparent self-citation.) A
 >    further consequence of this issue is that novelty is not sufficiently
 >    addressed by the authors. This work needs to be properly situated.
-
+DONE
 We agree and greatly appreciate the numerous provided pointers to the literature. 
 After accordingly reconsidering the literature on learning by teaching in robotics -- that we will appropriately present --, it
 appears that learning by teaching applied to a task with a physical component is still 100% novel.
@@ -53,7 +53,6 @@ All points have been well taken and the feedback will be incorporated to improve
 >    Also, I recommend removing “Those who cannot do, teach” from the
 >    title. This phrase is an insult to teachers, and it’s unclear how
 >    it’s relevant to this work.
-
 The title was meant to re-purpose the idiom in the context of children with handwriting difficulties having an opportunity to improve through teaching. We appreciate this reviewer bringing to light the potential for this to strike a nerve with teachers and will accept their recommendation. 
 
 >    The weaknesses of the paper lay in the part, in which the results of the
@@ -95,7 +94,7 @@ We agree that this was a wording issue on our part and will make reference to th
 >    actually write during the interaction. Thus, believability has not been
 >    validated sufficiently. (Also, I recommend never saying that something is
 >    generally “proven” when based on a limited sample.)
-
+DONE
 We agree with the points raised: it is a limitation of the question, which we imposed ourselves to avoid putting words in the children's mouths if we were to ask directly if the robot's writing was believable. Our argument is that at no point in the interaction did any child express that they did not believe that the robot was writing itself, even in a situation where they could have said "well, it's not *really* writing". We accept that we cannot conclude that the children believed it was writing, and will reword the outcome to instead be that no child ever expressed that they did not believe it was writing.
 
 >    (3) “For example, for the model shown in Figure 1, the parameters may
@@ -117,7 +116,7 @@ DONE
 >    With what wording were
 >    children asked whether they believed “the robot was learning and that
 >    they were the ones teaching it”? 
-
+DONE
 Initial parameters were drawn from a range chosen to generate shapes for letters 'e' and 's' which would elicit correction. For the other letters, parameters were fixed, generating shapes which some groups chose to correct (e.g. 13/14 for 'n' and 2/14 for 'c'). We agree that more detail is to be included about the wording of the questions to support the claims, and can include the information on both.
 
 >    The authors do a good job of citing related work on the educational side
@@ -143,7 +142,7 @@ Initial parameters were drawn from a range chosen to generate shapes for letters
 >    primary school”, Johnson et al.’s “Design and early evaluation of
 >    the rubi-5 sociable robots”, and Movellan et al.’s “Sociable robot
 >    improves toddler vocabulary skills”.
-
+DONE
 Again, we agree and will comply, and would like to thank the reviewer for their time in compiling this list.
 
 >    - The authors appear to violate double-blindness in up to 3 ways: by
@@ -152,7 +151,7 @@ Again, we agree and will comply, and would like to thank the reviewer for their 
 >    paper claims to be the “first known robotic partner which children can
 >    teach handwriting”, I assume that this citation is the same project),
 >    and an apparent experimenter’s face appearing in Figure 8.
-
+DONE
 This was an oversight on our side and we apologise for letting it go undetected.
 
 >    “a shape center of 0” - What’s really meant here is that the
@@ -189,15 +188,20 @@ We can clarify that we indeed refer to a shape with its centre at the origin, no
 >    Convincing according to what metric? Also, scaffolding itself was never
 >    even mentioned before this (and thus was not actually assessed).
 >
+
+
 >    “tablet-based application, which children are increasingly recognizing
 >    as a disposable technology.” This is a strong claim that lacks any
 >    evidence or argumentation. It’s not even clear what it means for an app
 >    to be “disposable”.
+DONE
 >
 >    In point #2 at the end of the first page, the authors imply that a robot
 >    can draw a letter but an app can only show it in a completely drawn state
 >    (not draw it along a trajectory at handwriting speed), which is false.
 >
+DONE
+
 >    - many long sentences that are difficult to read -
 >
 >    “With some of the challenges towards an engaging long- term handwriting
@@ -214,7 +218,12 @@ We can clarify that we indeed refer to a shape with its centre at the origin, no
 >
 >    - definitions needed -
 >
->    protege effect, inappropriate internal proportions, global deformations
+>    protege effect, 
+DONE
+
+>    inappropriate internal proportions, global deformations
+
+
 
 We agree with each of the points made; they will be addressed.
 
@@ -230,7 +239,7 @@ This is accurate and will be clarified in the section on the shape modeling algo
 >    dedicated to the synchronization (a technical challenge, to be sure, but
 >    not especially interesting from a research perspective) and dedicate more
 >    attention to the studies.
-
+DONE
 We believe the technical details to be relevant for those wishing to replicate the new technology presented.
 
 >    -- the authors might address how their system can deal with and/or
@@ -249,7 +258,7 @@ We agree that this is interesting future work; it has been mentioned on page 7.
 >    provided this kind of answer. With respect to the different age groups
 >    that interacted, the authors need to either to focus on one in their
 >    results or to analyze how the interaction differed in these groups.
-
+DONE
 It will be more clearly stated that the results presented were from the 7-8yr age group only, not those aged 6-7 in the pilot study.
 
 >    For the robot-drawn letters that were

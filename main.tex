@@ -115,6 +115,22 @@ that intentionally makes mistakes typical of children learning
 handwriting. Through this capability, the robot can be taught by
 children, who themselves may learn through their teaching.
 
+%Due to the intended use in a school environment, a commercially
+%affordable {\sc nao} humanoid robot has been used. Its writing capabilities 
+%have been implemented by leveraging synchronisation with a tablet display to
+%simulate fine motor skills otherwise infeasible for the robot. 
+
+Within this article, Section \ref{sec:learningAlgorithm} presents the novel work in the area of
+artificial intelligence to develop a learning algorithm suitable for a teachable
+agent in the context of handwriting. Section \ref{sec:robotWriting} details the
+extension of this algorithm to an embodied robotic learning agent, including the
+new approach for achieving simulated fine motor skills on commercially
+affordable humanoid robots such as the {\sc nao}. Section \ref{sec:experiment} explores the 
+contributions made to the study of human-robot interaction, in discussing the
+use of the system with primary school children and its potential as a tool for
+addressing wider pedagogical research questions in education. Finally, Section \ref{sec:futureWork} addresses the challenges which are faced in extending this system to a level suitable for long-term studies, and Section \ref{sec:conclusions} concludes by reiterating the content and impact of the article's contributions.
+
+\section{Related work}
 Teachable computer-based agents have previously been used to encourage the 
 ``protégé effect'', wherein students invest more effort into learning when it
 is for a teachable agent than for themselves~\cite{Chase2009}. As we are 
@@ -123,35 +139,34 @@ embodied in a humanoid robot which is capable of physically demonstrating
 handwriting trajectories to its child learning partner.
 This is supported by the potential for motor mimicry to yield significant 
 improvements in handwriting interventions in which letter formations are 
-demonstrated to participants~\cite{Berninger1997}.
+demonstrated to participants~\cite{Berninger1997}. Furthermore, when compared
+to screen-based agents, robotic partners have been shown in some contexts to 
+increase users' compliance with tasks~\cite{Bainbridge2011}, maintain more 
+effective long-term relationships~\cite{Kidd2008}, and produce greater 
+learning gains when acting as tutors~\cite{Leyzberg2012}: benefits which we
+hope will transfer into this application.
 
-Werfel suggests in~\cite{Werfel2014} that, until now, most of the work investigating how
-humans can teach robots (in particular, physical skills) focuses on the robot's
-benefits, and not so much on the learning experienced by the human tutor. Our
-work focuses on this latter aspect. A robotic learning agent which employs the learning by teaching paradigm has 
+Robots have been used as teachers or social partners to promote children's
+learning in a range of contexts, most commonly langauge skills~\cite{Han2010}, 
+but also contexts such as logic puzzles~\cite{Leyzberg2014} and in music 
+classes~\cite{Han2009}.
+Werfel suggests in~\cite{Werfel2014} that, until now, most of the work 
+investigating how humans can instead teach robots (language \cite{Saunders2010} or 
+table tennis \cite{Mulling2013}, for example) focuses on the robot's
+benefits rather than the learning experienced by the human tutor. Our
+work concentrates on this latter aspect. 
+
+A robotic learning agent which 
+employs the learning by teaching paradigm has 
 previously been developed by Tanaka and Matsuzoe~\cite{Tanaka2012}. In their
 system, children learn vocabulary by teaching the {\sc nao} robot to act out 
 verbs. The robot is tele-operated and mimics the actions that the children
 teach it, but with no long-term memory or learning algorithm in place.
-
-Our work significantly extends this line of work in two directions, first by
-proposing an autonomous robotic partner, second by investigating the context
+Our project significantly extends this line of work in two ways. First, by
+proposing a robotic partner which is fully autonomous in its learning,
+and second, by investigating the context
 of children's acquisition of a challenging physical skill (handwriting).
 
-Due to the intended use in a school environment, a commercially
-affordable {\sc nao} humanoid robot has been used. Its writing capabilities 
-have been implemented by leveraging synchronisation with a tablet display to
-simulate fine motor skills otherwise infeasible for the robot. 
-
-Within this article, Section \ref{sec:learningAlgorithm} presents the novel work in the area of
-artificial intelligence to develop a learning algorithm suitable for a teachable
-agent in the context of handwriting. Section \ref{sec:robotWriting} details the
-extension of this algorithm to an embodied robotic learning agent, including the
-new approach for achieving simulated fine motor skills on commercially
-affordable humanoid robots. Section \ref{sec:experiment} explores the 
-contributions made to the study of human-robot interaction, in discussing the
-use of the system with primary school children and its potential as a tool for
-addressing wider pedagogical research questions in education. Finally, Section \ref{sec:futureWork} addresses the challenges which are faced in extending this system to a level suitable for long-term studies, and Section \ref{sec:conclusions} concludes by reiterating the content and impact of the article's contributions.
 
 
 
