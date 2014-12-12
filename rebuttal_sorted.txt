@@ -82,7 +82,7 @@ We have provided also the number of demonstrations for each group, and have refr
 >    general categories.” Calling something reasonable does not make it so.
 >    The authors then make the unjustified claim that “sufficient
 >    capabilities… have been demonstrated.”
-
+DONE
 We agree that this was a wording issue on our part and will make reference to the classification methods used in previous work to determine such categories, and the confirmation that was received by teachers that the deformations are similar to childrens'.
 
 >    (2) To assess whether the children believed that the letter-writing
@@ -225,7 +225,7 @@ DONE
 DONE
 
 >    inappropriate internal proportions, global deformations
-
+DONE
 
 
 We agree with each of the points made; they will be addressed.
