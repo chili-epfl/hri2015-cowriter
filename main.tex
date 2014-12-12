@@ -198,7 +198,7 @@ path. The
 points are arranged into an observation vector presented in (\ref{eq:obsVec}),
 where $x_i$ and $y_i$ represent the coordinates of each of the points along the
 path. The observation shapes are normalised to have a unit maximum dimension 
-and centre at the origin.
+and {\bf 0} mean.
 
 \begin{equation}\label{eq:obsVec}
 {\bf x} = [x_1, x_2, \ldots, x_n, y_1, y_2, \ldots, y_n]^T
@@ -274,8 +274,7 @@ modelling approach to produce compact parameterisation of shapes.
 the shape model derived from PCA from the dataset of print `s'
 shapes.]{\label{fig:deviations_sPrint}The mean shape (left) and the effect
     (right) of varying the first three parameters (each row) of a shape model.
-     The extent to which each
-parameter is varied is dependent on the eigenvalue $\lambda$ corresponding to
+     Parameter variation is dependent on the eigenvalue $\lambda$ corresponding to
 the parameter's eigenvector. The percentage of the total variance in the dataset
 explained by each parameter is shown to the left of the corresponding row. }
 
@@ -353,18 +352,10 @@ learning algorithm which adapts to the user's feedback via demonstration letters
 
 The statistical shape model is used to determine the parameters of a
 demonstration shape by projecting the features of the observed shape into the
-lower-dimensional space determined by the model. Mathematically, given a
-demonstration ${\bf x}_{demo}$, the associated parameters may be determined as in
-(\ref{eq:param}), which will reconstruct an approximate shape.
-
-%really this is the same as eq 3
-\begin{equation}\label{eq:param}
-{\bf p}_{demo} ={\bf \Phi}^T ({\bf{x}_{demo}}-\bf{\bar{x}})
-\end{equation}
-
-%The parameters which are determined for a shape in (\ref{eq:param}) will not
-%reconstruct the shape exactly if $N<2n$, but rather will reconstruct the closest
-%point in the $N$-dimensional space which the eigenvectors span.
+lower-dimensional space determined by the model. Mathematically, the parameters
+associated with a demonstration ${\bf x}_{demo}$ are determined as in
+(\ref{eq:paramCalc}) with ${\bf x}={\bf x}_{demo}$, and will reconstruct the 
+closest approximate shape.
 
 For the statistical shape model employed by the system, the method for
 responding to user demonstrations is to move the learning algorithm's parameters
@@ -413,7 +404,7 @@ mathematically.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{An Embodied Handwriting Learning Agent with the NAO Humanoid Robot}
+\section{Embodiment of the Learning Agent with the NAO Humanoid Robot}
 \label{sec:robotWriting}
 
 In order to develop a teachable agent that is appropriate for engaging a child
@@ -753,7 +744,7 @@ interacted with the system for a total of 65 minutes, with the robot writing 96
 letters. 49 of these letters were in response to demonstrations from the children 
 and the remaining were from when new words were requested. 
 
-As a result of the pilot study, two key observations were acted on. The first
+As a result of the pilot study, we acted on two key observations. The first
 was that children appeared to have a difficult time providing demonstrations to
 the robot in the same place as previously-written letters. At the time, the
 system required the children to write on top of a letter of the same type as the
@@ -783,7 +774,7 @@ was between 8 and 15 minutes, with an average of 11.4 minutes (SD = 2.3).
 %The following conclusions were successfully drawn about the system as a result
 %of the study at the second school.
 
-It has been concluded following the second study that the system has 
+We have concluded following the second study that the system has 
 been validated as a technically sound autonomous interaction. 
 The interaction setup including the teachable
 robotic agent withstood the interaction which lasted for a total of 160 minutes. 
@@ -822,7 +813,7 @@ Regarding the engagement of the children in teaching the robot,
     teaching after the test word had been written and evaluated -- the only
     purposefully imposed external motivation -- may suggest that by that time
     the participants had become intrinsically motivated to engage in the
-    interaction.
+    interaction, as we anticipated.
 
 %     \textbf{All children believed that the robot was learning and that
 %         they were the ones teaching it.} This was concluded from the responses
@@ -853,7 +844,7 @@ Several challenges are raised in developing such long-term capabilities for the 
 In terms of the interaction experience, the current experimental setting, while
 technically autonomous, can not robustly recover from situations outside of the
 nominal protocol presented in Section~\ref{sec4}, and consequently still
-requires the presence of an experimenter. The interaction finite state machine would
+requires the supervision of an experimenter. The interaction finite state machine would
 require extension in non-trivial ways to allow for long, fully autonomous
 interactions with children.
 
@@ -862,16 +853,18 @@ cannot engage in discussions with the participants. It is clear that work is nec
 to develop the conversational agent in the interaction so that the presence of an 
 experimenter is not required for a captivating and continuing engagement. While there is the 
 possiblity to focus the interaction design on group-based interaction with the robot 
-in order to alleviate the necessity of a conversational agent, there is reason to 
+in order to alleviate the necessity of a conversational agent, we find reason to 
 believe that constructing such a social interaction is not a trivial task. Anecdotes 
 from the preliminary studies have shown that some children may criticise another's 
 demonstrations to the robot, which may or may not be as damaging to a child's 
-self-efficacy as when they are criticised in a typical educational context. In addition,
-on occassions where a pair of children came to teach the robot different styles of a 
-particular letter, they did not discuss with each other their different writing styles 
-and the effect on the teaching efficiency. This may suggest that a constructed social context in 
-which verbalising opinions about differences is encouraged may be necessary to get children 
-to cooperate in teaching the robot in a group setting.  
+self-efficacy as when they are criticised in a typical educational context. 
+
+%In addition,
+%on occassions where a pair of children came to teach the robot different styles of a 
+%particular letter, they did not discuss with each other their different writing styles 
+%and the effect on the teaching efficiency. This may suggest that a constructed social context in 
+%which verbalising opinions about differences is encouraged may be necessary to get children 
+%to cooperate in teaching the robot in a group setting.  
 %- "Would have problems with the 'n'" - (8) projecting human learning characteristics.
 %- awkward silence, speaking over the top of the robot to talk to experimenter....
 %- Children saying the other was bad... (3, 9).
@@ -879,25 +872,23 @@ to cooperate in teaching the robot in a group setting.
 
 How the children's perception of the robot as a learning agent may change over the 
 long-term remains to be seen. On one occasion during the preliminary studies, a 
-child's response to whether or not the {\sc nao} could write its own name included that it 
+child's response to whether or not the {\sc nao} could write its own name (not
+previously demonstrated) included that it 
 may have problems with the `n', as the child had been correcting the robot on this 
-letter. This suggests that users may project human-like learning features, such as 
-forgetfulness, onto the robot, whether or not they are technically present.
+letter. We believe that the user was projecting human-like learning features, such as 
+forgetfulness, onto the robot, although they were not technically present in the system.
 This may need to be capitalised on when considering how to 
-extend the interaction for long time frames, as the present system -- with a learning rate 
+extend the interaction for long-term use, as the present system -- with a learning rate 
 such that progress is evident to the user -- will cause convergence for a letter within a 
 few iterations.
 
-In the scope of open technical questions for enabling long-term interaction, it remains to be seen how shape models
-for letters might be generated which capture the full range of mistakes typical
-of children learning handwriting. This includes extending the current system capable of
-incorporating internal proportion and global deformation errors to one which can
-also generate missing subparts of the letter, or write letters backwards, for example. 
-While it is expected that incorporating a
-database of letters drawn by children into the shape modeling process would
-facilitate this, the current system has conceptual -- a PCA-only approach can not
-generate or learn a different shape topology -- and technical -- no support is currently implemented for
-multi-stroke shapes -- limitations which would need to be overcome.
+We expect that incorporating a
+database of letters drawn by children into the shape modeling process will
+facilitate generating shape models which capture a wider range of mistakes typical
+of children learning handwriting. However, the current system has conceptual -- 
+a PCA-only approach can not generate or learn a different shape topology -- and 
+technical -- no support is currently implemented for shapes which require pen
+lifting between strokes -- limitations which would need to be overcome.
 
 If the system is extended to allow for a wider range of mistakes, a further 
 topic for exploration then is how the handwriting error
