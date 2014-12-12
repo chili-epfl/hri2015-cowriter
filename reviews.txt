@@ -1,4 +1,4 @@
------------------------- Submission 2155, Review 4 ------------------------
+﻿------------------------ Submission 2155, Review 4 ------------------------
 
 Title: "Those who can't do, teach": a Teachable Robotic Agent for Children Learning Handwriting
 
@@ -538,7 +538,9 @@ Secondary Meta Review
    off base: for the human, it is a teaching by learning paradigm, but for
    the robot, this is a learning from demonstration (LfD) paradigm---and
    there is a large existing body of work on LfD applied to physical tasks
-   (including fine motor). While some concerns were raised about the
+   (including fine motor). 
+
+   While some concerns were raised about the
    scientific methodology of the user studies, these were not shared by all
    reviewers, and the development of this system (algorithm and hardware
    implementation) and deployment within a school is a contribution in its
