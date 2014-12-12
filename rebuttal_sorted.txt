@@ -179,6 +179,8 @@ We can clarify that we indeed refer to a shape with its centre at the origin, no
 >    Honestly, I don’t actually know for sure who was doing the reasoning or
 >    reporting their expectations above. I just assume it’s the authors. But
 >    I don’t know because they removed the actor in these sentences.
+DONE
+
 >
 >    - includes numerous poorly justified assertions and some bad logic -
 >
@@ -189,7 +191,7 @@ We can clarify that we indeed refer to a shape with its centre at the origin, no
 >    Convincing according to what metric? Also, scaffolding itself was never
 >    even mentioned before this (and thus was not actually assessed).
 >
-
+DONE
 
 >    “tablet-based application, which children are increasingly recognizing
 >    as a disposable technology.” This is a strong claim that lacks any
