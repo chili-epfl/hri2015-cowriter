@@ -19,29 +19,26 @@
 \newcommand{\etal}{{\textit{et al.~}}}
 \newcommand{\ie}{{\textit{i.e.~}}}
 
-%
 % --- Author Metadata here ---
-\conferenceinfo{10th ACM/IEEE International Conference on Human-Robot Interaction}{2015 Portland, USA}
-%\CopyrightYear{2007} % Allows default copyright year (20XX) to be over-ridden - IF NEED BE.
-%\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
+\conferenceinfo{HRI '15, March 02 - 05 2015,}{Portland, OR, USA}
+\CopyrightYear{is held by the owner/author(s). Publication rights licensed to ACM.} % Allows default copyright year (20XX) to be over-ridden - IF NEED BE.
+\crdata{978-1-4503-2883-8/15/03}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
 % --- End of Author Metadata ---
+
 
 \title{\LARGE \bf
 When Children Teach a Robot to Write: An Autonomous Teachable Humanoid Which Uses Simulated Handwriting
 }
 
 \numberofauthors{1} 
-%\author{
-%\alignauthor
-%Deanna Hood, Séverin Lemaignan, Pierre Dillenbourg\\
-%   \affaddr{Computer-Human Interaction in Learning and Instruction Laboratory (CHILI)}\\
-%   \affaddr{École Polytechnique Fédérale\\ de Lausanne (EPFL)}\\
-%   %\affaddr{CH-1015 Lausanne, Switzerland}\\
-%   \email{firstname.lastname@epfl.ch}
-%}
-
-%(DH) my EPFL email address won't work for much longer....
-
+\author{
+\alignauthor
+Deanna Hood, Séverin Lemaignan, Pierre Dillenbourg\\
+   \affaddr{Computer-Human Interaction in Learning and Instruction Laboratory (CHILI)}\\
+   \affaddr{École Polytechnique Fédérale de Lausanne (EPFL)}\\
+   %\affaddr{CH-1015 Lausanne, Switzerland}\\
+   \email{firstname.lastname@epfl.ch}
+}
 
 \begin{document}
 
@@ -55,7 +52,7 @@ When Children Teach a Robot to Write: An Autonomous Teachable Humanoid Which Use
 This article presents a novel robotic partner which children can teach
 handwriting.  The system relies on the \emph{learning by teaching} paradigm to
 build an interaction, so as to stimulate meta-cognition, empathy and
-increased self-esteem in the child user.  We hypothesise that use of a
+increased self-esteem in the child user. We hypothesise that use of a
 humanoid robot in such a system could not just engage an unmotivated student,
 but could also present the opportunity for children to experience
 physically-induced benefits encountered during human-led handwriting
@@ -144,7 +141,7 @@ tutors~\cite{Leyzberg2012}.
 
 Robots have been used as teachers or social partners to promote children's
 learning in a range of contexts, most commonly related to language
-skills~\cite{Han2010}, and less often to physical skills (such as
+skills~\cite{han2010robot}, and less often to physical skills (such as
 calligraphy~\cite{Matsui2013}).  Looking at the converse (humans \emph{teaching}
 robots), Werfel notes in~\cite{Werfel2014} that most of the work focuses on the
 robot's benefits (in terms of language~\cite{Saunders2010} or
@@ -459,9 +456,8 @@ trajectory to appear (as in Figure \ref{fig:naoWriting}) has several advantages:
 
    \label{fig:naoWriting}
 \end{figure}
-%\footnotetext{See \url{https://www.youtube.com/watch?v=2qWFSJRxCU0} for a video of the synchronised 
-\footnotetext{See \url{[anonymized]} for a video of the synchronised 
-writing demonstration. }
+\footnotetext{See \url{https://www.youtube.com/watch?v=2qWFSJRxCU0} for a video
+of the synchronised writing demonstration. }
 
 We have therefore designed the system in such a way that the robot is simulating
 handwriting by pointing at the tablet\footnote{Teachers interviewed for their
@@ -560,8 +556,7 @@ The output shapes from the learning algorithm are then sent again to the devices
 which write them.
 
 The source code for the teachable robotic handwriting partner has been made 
-%available at \url{https://github.com/chili-epfl/cowriter_letter_learning}.
-available at \url{[anonymized]}.
+available at \url{https://github.com/chili-epfl/cowriter_letter_learning}.
 
 
 %Feedback from the user is passed to the controller with the location on the
@@ -696,19 +691,19 @@ between the participant and the robot which consists of the following stages:
 %
         \subfigure[The user shows a card to the robot with a word to write.]{%
             \label{fig:first}
-            \includegraphics[width=0.2\textwidth]{figures/1anon.jpg}
+            \includegraphics[width=0.2\textwidth]{figures/1card}
         }~
         \subfigure[The robot writes the word seen on the card and asks for feedback.]{%
            \label{fig:second}
-           \includegraphics[width=0.2\textwidth]{figures/2anon.jpg}
+           \includegraphics[width=0.2\textwidth]{figures/2word}
         }\\ %  ------- End of the first row ----------------------%
         \subfigure[The user provides feedback on the letters written via demonstration.]{%
             \label{fig:third}
-            \includegraphics[width=0.2\textwidth]{figures/3anon.jpg}
+            \includegraphics[width=0.2\textwidth]{figures/3ask}
         }~
         \subfigure[The robot responds to the feedback, until the user is satisfied.]{%
             \label{fig:fourth}
-            \includegraphics[width=0.2\textwidth]{figures/4anon.jpg}
+            \includegraphics[width=0.2\textwidth]{figures/4correct}
         }%
 %
     \end{center}
@@ -990,10 +985,10 @@ interaction.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Anonymized for double-blind review
-%\section*{Acknowledgments}
-%
-%This research was supported by the Swiss National Science Foundation through the
-%National Centre of Competence in Research Robotics.
+\section*{Acknowledgments}
+
+This research was supported by the Swiss National Science Foundation through the
+National Centre of Competence in Research Robotics.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
